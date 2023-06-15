@@ -1,7 +1,7 @@
 import gdsfactory as gf
 from gdsfactory.component import Component
 from gdsfactory.components.taper_cross_section import taper_cross_section
-import vtt_tech
+import vtt_tech_public
 from typing import Optional
 from gdsfactory.cross_section import Section, CrossSection, LayerSpec
 
@@ -132,8 +132,8 @@ def strip_taper(
         del kwargs["cross_section"]
 
     c = taper_cross_section(
-        cross_section1=vtt_tech.xsections.strip(width1),
-        cross_section2=vtt_tech.xsections.strip(width2),
+        cross_section1=vtt_tech_public.xsections.strip(width1),
+        cross_section2=vtt_tech_public.xsections.strip(width2),
         linear=True,
         npoints=2,
         **kwargs,
@@ -157,8 +157,8 @@ def rib_taper(
     """
     length = abs(width1 - width2) * taper_ratio
     c = taper_cross_section(
-        cross_section1=vtt_tech.xsections.rib(width1),
-        cross_section2=vtt_tech.xsections.rib(width2),
+        cross_section1=vtt_tech_public.xsections.rib(width1),
+        cross_section2=vtt_tech_public.xsections.rib(width2),
         length=length,
         linear=True,
         npoints=2,

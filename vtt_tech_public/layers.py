@@ -5,7 +5,7 @@ from pydantic import BaseModel, Extra
 
 import yaml
 
-from vtt_tech.config import PATH
+from vtt_tech_public.config import PATH
 
 class LayerMap(BaseModel):
 

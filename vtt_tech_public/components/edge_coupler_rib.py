@@ -1,6 +1,6 @@
 import gdsfactory as gf
 from gdsfactory.component import Component
-from vtt_tech.xsections import rib
+from vtt_tech_public.xsections import rib
 
 
 @gf.cell

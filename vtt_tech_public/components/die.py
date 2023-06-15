@@ -6,7 +6,7 @@ import gdsfactory as gf
 from gdsfactory.components.text import text
 from gdsfactory.typings import LayerSpec, ComponentSpec, Float2
 
-import vtt_tech
+import vtt_tech_public
 
 
 def box(x0, y0, w, h):
@@ -39,7 +39,7 @@ def die(
     c = gf.Component(name="die")
     w, h = size[0], size[1]
 
-    for layer, size in vtt_tech.frame_dimensions.items():
+    for layer, size in vtt_tech_public.frame_dimensions.items():
         c.add_polygon(box(w / 2.0 - size / 2.0, 0.0, size, h), layer=layer)
         c.add_polygon(box(-w / 2.0 + size / 2.0, 0.0, size, h), layer=layer)
 
@@ -53,17 +53,17 @@ def die(
         )
 
     c.info["port_x_position_west"] = (
-        -w / 2.0 + vtt_tech.frame_dimensions[vtt_tech.LAYER.WG_SNGL_ADD] + 1.5
+            -w / 2.0 + vtt_tech_public.frame_dimensions[vtt_tech_public.LAYER.WG_SNGL_ADD] + 1.5
     )
     c.info["port_x_position_east"] = (
-        w / 2.0 - vtt_tech.frame_dimensions[vtt_tech.LAYER.WG_SNGL_ADD] - 1.5
+            w / 2.0 - vtt_tech_public.frame_dimensions[vtt_tech_public.LAYER.WG_SNGL_ADD] - 1.5
     )
 
     c.info["port_y_position_north"] = (
-        h / 2.0 - vtt_tech.frame_dimensions[vtt_tech.LAYER.WG_SNGL_ADD] - 1.5
+            h / 2.0 - vtt_tech_public.frame_dimensions[vtt_tech_public.LAYER.WG_SNGL_ADD] - 1.5
     )
     c.info["port_y_position_south"] = (
-        -h / 2.0 + vtt_tech.frame_dimensions[vtt_tech.LAYER.WG_SNGL_ADD] + 1.5
+            -h / 2.0 + vtt_tech_public.frame_dimensions[vtt_tech_public.LAYER.WG_SNGL_ADD] + 1.5
     )
 
     return c
