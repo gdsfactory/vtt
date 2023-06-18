@@ -1,0 +1,10 @@
+name: gf
+
+dependencies:
+  - python=3.11
+  - pyyaml
+  - pip=32.1
+  - pip:
+      - gdsfactory==6.102.4
+      - black[d]
+      - https://gitlab.vtt.fi/ttemth/gdsfactory-vtt-public-pdk/-/archive/main/gdsfactory-vtt-public-pdk-main.zip
