@@ -74,11 +74,4 @@ routes = gf.routing.get_bundle_all_angle([mymzi.ports['o1'], mymzi.ports['o2']],
 for route in routes:
     c.add(route.references)
 
-str1 = gf.components.straight(cross_section="rib", length=100)
-str2 = gf.components.straight(cross_section="strip", length=100)
-
-sa = c << str1
-sb = c << str2
-
-auto_taper_connector(sa.ports['o2'], sb.ports['o2'])
 c.show()
