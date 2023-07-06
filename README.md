@@ -1,19 +1,22 @@
 # gdsfactory-vtt-public-pdk
 
-A public [gdsfactory](https://gdsfactory.github.io/gdsfactory/index.html#) process design kit (PDK) for VTT's 3 um SOI platform.
+A public [gdsfactory](https://gdsfactory.github.io/gdsfactory/index.html#) process design kit (PDK) for VTT's 3 um SOI
+platform.
 
 &copy; VTT 2023
 
 ## Installation
 
-Easiest way to install is by using the [Anaconda](https://www.anaconda.com/download) Python distribution. Download the `environment.yml` file in the inder folder and then run in an Anaconda prompt:
+Easiest way to install is by using the [Anaconda](https://www.anaconda.com/download) Python distribution. Download
+the `environment.yml` file in the inder folder and then run in an Anaconda prompt:
 
     conda env create --file environment.yml
 
 This will create a new Python environment labeled `gf` with all the required packages installed.
 You will need to point your editor Python interpreter to this environment, how to do this depends on the editor.
 
-In addition you should install [Klayout](http://www.klayout.de) and the Klive package from the integrated pacakge manager.
+In addition you should install [Klayout](http://www.klayout.de) and the Klive package from the integrated pacakge
+manager.
 
 ## Testing the PDK without installation
 
