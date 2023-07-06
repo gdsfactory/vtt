@@ -36,15 +36,12 @@ modules:
     gds_layer: 2
     description: Metallization module
     layers:
-      GOLD:
-        datatype: 2
-        ADD_note: Gold
       ALUM:
         datatype: 3
         ADD_note: Aluminium for echelles, back-reflectors
       HVIA:
         datatype: 4
-        ADD_note: Oxide via for implanted heaters
+        ADD_note: Oxide via for contacting implanted heaters
       WIRE:
         datatype: 5
         ADD_note: Aluminium electrical wiring
