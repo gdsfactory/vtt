@@ -2,7 +2,7 @@ name: mmi2x2_426a4478
 ports:
   o1:
     center:
-    - -1.0
+    - -10.0
     - -1.562
     layer:
     - 89
@@ -14,7 +14,7 @@ ports:
     width: 1.875
   o2:
     center:
-    - -1.0
+    - -10.0
     - 1.562
     layer:
     - 89
@@ -26,7 +26,7 @@ ports:
     width: 1.875
   o3:
     center:
-    - 113.0
+    - 122.0
     - 1.562
     layer:
     - 89
@@ -38,7 +38,7 @@ ports:
     width: 1.875
   o4:
     center:
-    - 113.0
+    - 122.0
     - -1.562
     layer:
     - 89

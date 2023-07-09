@@ -24,11 +24,9 @@ settings:
   changed: {}
   child: null
   default:
-    length: 200.0
     width1: 3.0
     width2: 3.0
   full:
-    length: 200.0
     width1: 3.0
     width2: 3.0
   function_name: strip_to_rib
@@ -37,5 +35,5 @@ settings:
     width1: 3.0
     width2: 3.0
   info_version: 2
-  module: gvtt.components.rib_strip_converter
+  module: gvtt.components.transitions
   name: strip_to_rib

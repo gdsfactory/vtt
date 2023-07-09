@@ -2,7 +2,7 @@ name: mmi1x2_1e450ddf
 ports:
   o1:
     center:
-    - -1.0
+    - -10.0
     - 0.0
     layer:
     - 89
@@ -14,7 +14,7 @@ ports:
     width: 1.875
   o2:
     center:
-    - 44.25
+    - 53.25
     - 1.562
     layer:
     - 89
@@ -26,7 +26,7 @@ ports:
     width: 1.875
   o3:
     center:
-    - 44.25
+    - 53.25
     - -1.562
     layer:
     - 89

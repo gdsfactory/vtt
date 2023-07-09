@@ -18,7 +18,6 @@ from gvtt.components.transitions import (
     rib_taper,
     rib_to_strip,
     strip_taper,
-    strip_to_rib,
     xs_rib_strip,
 )
 
@@ -32,6 +31,5 @@ __all__ = [
     "rib_taper",
     "rib_to_strip",
     "strip_taper",
-    "strip_to_rib",
     "xs_rib_strip",
 ]

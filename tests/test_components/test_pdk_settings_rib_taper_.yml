@@ -1,41 +1,47 @@
-name: rib_to_strip
+name: rib_taper
 ports:
   o1:
     center:
     - 0.0
     - 0.0
-    layer: null
+    layer:
+    - 89
+    - 0
     name: o1
     orientation: 180
     port_type: optical
     shear_angle: null
-    width: 3.0
+    width: 1.0
   o2:
     center:
-    - 200.0
+    - 0.01
     - 0.0
-    layer: null
+    layer:
+    - 89
+    - 0
     name: o2
     orientation: 0.0
     port_type: optical
     shear_angle: null
-    width: 3.0
+    width: 1.0
 settings:
   changed: {}
   child: null
   default:
-    length: 200.0
-    width1: 3.0
-    width2: 3.0
+    length: null
+    taper_ratio: 50.0
+    width1: 1
+    width2: 1
   full:
-    length: 200.0
-    width1: 3.0
-    width2: 3.0
-  function_name: rib_to_strip
+    length: null
+    taper_ratio: 50.0
+    width1: 1
+    width2: 1
+  function_name: rib_taper
   info:
-    length: 200.0
-    width1: 3.0
-    width2: 3.0
+    length: 0.01
+    width1: 1.0
+    width2: 1.0
   info_version: 2
   module: gvtt.components.transitions
-  name: rib_to_strip
+  name: rib_taper

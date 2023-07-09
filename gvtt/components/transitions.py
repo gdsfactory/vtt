@@ -100,21 +100,6 @@ def rib_to_strip(
 
 
 @gf.cell
-def strip_to_rib(
-    width1=3.0,
-    width2=3.0,
-) -> Component:
-    """
-    Standard rib-to-strip waveguide converter.
-    """
-
-    c = rib_to_strip(width1=width2, width2=width1)
-    c.ports["o1"].name = "o2"
-    c.ports["o2"].name = "o1"
-    return c
-
-
-@gf.cell
 def strip_taper(
     width1=1,
     width2=1,
@@ -125,10 +110,11 @@ def strip_taper(
     """
     Standard rib-to-strip waveguide converter.
     """
-    length = length or abs(width1 - width2) * taper_ratio
+    length = length or abs(width1 - width2) * taper_ratio or 10e-3
     kwargs.pop("cross_section", None)
+    c = gf.Component()
 
-    c = taper_cross_section(
+    ref = c << taper_cross_section(
         cross_section1=strip(width1),
         cross_section2=strip(width2),
         linear=True,
@@ -138,7 +124,8 @@ def strip_taper(
     c.info["length"] = length
     c.info["width1"] = float(width1)
     c.info["width2"] = float(width2)
-
+    c.add_ports(ref.ports)
+    c.absorb(ref)
     return c
 
 
@@ -147,13 +134,15 @@ def rib_taper(
     width1=1,
     width2=1,
     taper_ratio=50.0,
+    length: Optional[float] = None,
     **kwargs,
 ) -> Component:
     """
     Standard rib-to-strip waveguide converter.
     """
-    length = abs(width1 - width2) * taper_ratio
-    c = taper_cross_section(
+    length = length or abs(width1 - width2) * taper_ratio or 10e-3
+    c = gf.Component()
+    ref = c << taper_cross_section(
         cross_section1=rib(width1),
         cross_section2=rib(width2),
         length=length,
@@ -164,11 +153,13 @@ def rib_taper(
     c.info["length"] = length
     c.info["width1"] = float(width1)
     c.info["width2"] = float(width2)
+    c.add_ports(ref.ports)
+    c.absorb(ref)
     return c
 
 
 if __name__ == "__main__":
     c = rib_taper()
     # c = strip_taper()
-    c.pprint_ports()
+    # c.pprint_ports()
     c.show()
