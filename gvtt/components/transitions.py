@@ -1,9 +1,11 @@
+from typing import Optional
+
 import gdsfactory as gf
 from gdsfactory.component import Component
 from gdsfactory.components.taper_cross_section import taper_cross_section
-import gvtt
-from typing import Optional
 from gdsfactory.cross_section import Section, CrossSection, LayerSpec
+
+from gvtt.xsections import rib, strip
 
 
 @gf.xsection
@@ -54,7 +56,6 @@ def rib_to_strip(
     length=200.0,
     width1=3.0,
     width2=3.0,
-    **kwargs,
 ) -> Component:
     """
     Standard rib-to-strip waveguide converter.
@@ -100,10 +101,8 @@ def rib_to_strip(
 
 @gf.cell
 def strip_to_rib(
-    length=200.0,
     width1=3.0,
     width2=3.0,
-    **kwargs,
 ) -> Component:
     """
     Standard rib-to-strip waveguide converter.
@@ -120,25 +119,23 @@ def strip_taper(
     width1=1,
     width2=1,
     taper_ratio=25.0,
+    length: Optional[float] = None,
     **kwargs,
 ) -> Component:
     """
     Standard rib-to-strip waveguide converter.
     """
-    if "length" not in kwargs.keys():
-        kwargs["length"] = abs(width1 - width2) * taper_ratio
-
-    if "cross_section" in kwargs.keys():
-        del kwargs["cross_section"]
+    length = length or abs(width1 - width2) * taper_ratio
+    kwargs.pop("cross_section", None)
 
     c = taper_cross_section(
-        cross_section1=gvtt.xsections.strip(width1),
-        cross_section2=gvtt.xsections.strip(width2),
+        cross_section1=strip(width1),
+        cross_section2=strip(width2),
         linear=True,
         npoints=2,
         **kwargs,
     )
-    c.info["length"] = kwargs["length"]
+    c.info["length"] = length
     c.info["width1"] = float(width1)
     c.info["width2"] = float(width2)
 
@@ -157,8 +154,8 @@ def rib_taper(
     """
     length = abs(width1 - width2) * taper_ratio
     c = taper_cross_section(
-        cross_section1=gvtt.xsections.rib(width1),
-        cross_section2=gvtt.xsections.rib(width2),
+        cross_section1=rib(width1),
+        cross_section2=rib(width2),
         length=length,
         linear=True,
         npoints=2,
@@ -173,4 +170,5 @@ def rib_taper(
 if __name__ == "__main__":
     c = rib_taper()
     # c = strip_taper()
+    c.pprint_ports()
     c.show()

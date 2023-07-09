@@ -9,7 +9,7 @@ from gdsfactory.path import euler
 from gdsfactory.typings import CrossSectionSpec, Optional
 
 
-def eulerR_1550(angle: float) -> float:
+def _eulerR_1550(angle: float) -> float:
     if angle == 0:
         return 0.0
     p, v, a0 = 0.79, 2093.0, 18.75  # for 1550 nm, TE, 1.875 um
@@ -61,7 +61,7 @@ def bend_euler(
     """
 
     x = gf.get_cross_section(cross_section, **kwargs)
-    radius = eulerR_1550(abs(angle))
+    radius = _eulerR_1550(abs(angle))
 
     if radius is None:
         return wire_corner(cross_section=x)

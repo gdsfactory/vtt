@@ -1,7 +1,7 @@
 from gdsfactory.components import mmi2x2 as _mmi2x2
 from functools import partial
 from gvtt.xsections import strip
-from gvtt.components import strip_taper
+from gvtt.components.transitions import strip_taper
 
 
 mmi2x2 = partial(

@@ -17,7 +17,7 @@ from gvtt.layers import LAYER
 def rib(
     width: float = 2.5,
     width_trench: float = 10.0,
-    wg_marking_layer: Optional[LayerSpec] = LAYER.TYPE_RIB,
+    wg_marking_layer: LayerSpec = LAYER.TYPE_RIB,
     **kwargs,
 ) -> CrossSection:
     """Return CrossSection of rib waveguide defined by trenches."""
@@ -46,7 +46,7 @@ def rib(
 def strip(
     width: float = 1.875,
     width_trench: float = 10.0,
-    wg_marking_layer: Optional[LayerSpec] = LAYER.TYPE_STRIP,
+    wg_marking_layer: LayerSpec = LAYER.TYPE_STRIP,
     **kwargs,
 ) -> CrossSection:
     """Return CrossSection of strip waveguide defined by trenches."""
