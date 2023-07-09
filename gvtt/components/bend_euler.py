@@ -4,14 +4,12 @@ import numpy as np
 import gdsfactory as gf
 from gdsfactory.add_padding import get_padding_points
 from gdsfactory.component import Component
-from gdsfactory.components.straight import straight
 from gdsfactory.components.wire import wire_corner
-from gdsfactory.cross_section import strip
 from gdsfactory.path import euler
 from gdsfactory.typings import CrossSectionSpec, Optional
 
 
-def eulerR_1550(angle):
+def eulerR_1550(angle: float) -> float:
     if angle == 0:
         return 0.0
     p, v, a0 = 0.79, 2093.0, 18.75  # for 1550 nm, TE, 1.875 um
@@ -62,7 +60,6 @@ def bend_euler(
        o1_____/
     """
 
-
     x = gf.get_cross_section(cross_section, **kwargs)
     radius = eulerR_1550(abs(angle))
 
@@ -110,3 +107,8 @@ def bend_euler(
     c.absorb(ref)
 
     return c
+
+
+if __name__ == "__main__":
+    c = bend_euler()
+    c.show(show_ports=True)

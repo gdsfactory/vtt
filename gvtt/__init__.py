@@ -1,19 +1,13 @@
 from __future__ import annotations
 
-import pathlib
-
-from .layers import LAYER
-from .xsections import cross_sections
-
-from gdsfactory.technology import LayerViews
-from .config import PATH
-
 from gdsfactory.pdk import Pdk, constants
-
 from gdsfactory.get_factories import get_cells
 import gdsfactory
 
-from . import components
+from gvtt.layers import LAYER
+from gvtt.xsections import cross_sections
+from gvtt.config import PATH
+from gvtt import components
 
 cells = get_cells([components])
 
@@ -68,13 +62,13 @@ pdk = Pdk(
 gdsfactory.routing.all_angle.LOW_LOSS_CROSS_SECTIONS = [
     {"cross_section": "rib", "settings": {"width": 2.5}},
     {"cross_section": "strip", "settings": {"width": 6.0}},
-    {"cross_section": "strip", "settings": {"width": 3.0}}
+    {"cross_section": "strip", "settings": {"width": 3.0}},
 ]
 
 pdk.activate()
 
 if __name__ == "__main__":
-    layer_views = LayerViews(filepath=PATH.klayout_yaml)
-    layer_views.to_lyp(PATH.klayout_lyp)
+    # layer_views = LayerViews(filepath=PATH.lyp_yaml)
+    # layer_views.to_lyp(PATH.lyp)
 
-    # print(pdk.name)
+    print(pdk.name)

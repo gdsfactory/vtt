@@ -1,0 +1,78 @@
+name: mmi1x2_1e450ddf
+ports:
+  o1:
+    center:
+    - -1.0
+    - 0.0
+    layer:
+    - 89
+    - 1
+    name: o1
+    orientation: 180
+    port_type: optical
+    shear_angle: null
+    width: 1.875
+  o2:
+    center:
+    - 44.25
+    - 1.562
+    layer:
+    - 89
+    - 1
+    name: o2
+    orientation: 0.0
+    port_type: optical
+    shear_angle: null
+    width: 1.875
+  o3:
+    center:
+    - 44.25
+    - -1.562
+    layer:
+    - 89
+    - 1
+    name: o3
+    orientation: 0.0
+    port_type: optical
+    shear_angle: null
+    width: 1.875
+settings:
+  changed:
+    cross_section:
+      function: strip
+    gap_mmi: 1.25
+    length_mmi: 43.25
+    length_taper: 1.0
+    taper:
+      function: strip_taper
+    width_mmi: 6.25
+    width_taper: 1.875
+  child: null
+  default:
+    cross_section: strip
+    gap_mmi: 0.25
+    length_mmi: 5.5
+    length_taper: 10.0
+    taper:
+      function: taper
+    width: null
+    width_mmi: 2.5
+    width_taper: 1.0
+    with_bbox: true
+  full:
+    cross_section:
+      function: strip
+    gap_mmi: 1.25
+    length_mmi: 43.25
+    length_taper: 1.0
+    taper:
+      function: strip_taper
+    width: null
+    width_mmi: 6.25
+    width_taper: 1.875
+    with_bbox: true
+  function_name: mmi1x2
+  info: {}
+  info_version: 2
+  module: gdsfactory.components.mmi1x2
+  name: mmi1x2_1e450ddf

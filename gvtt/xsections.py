@@ -10,7 +10,7 @@ from gdsfactory.cross_section import (
     xsection,
     Section,
 )
-from .layers import LAYER
+from gvtt.layers import LAYER
 
 
 @xsection
@@ -114,8 +114,9 @@ def vttstrip(
 
 sm_rib = rib(width=2.5)
 euler_strip = strip(width=1.875)
-
 cross_sections = get_cross_section_factories(sys.modules[__name__])
 
 if __name__ == "__main__":
     print(cross_sections.keys())
+    c = gf.components.straight(cross_section=rib)
+    c.show()

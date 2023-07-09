@@ -1,0 +1,41 @@
+name: rib_to_strip
+ports:
+  o1:
+    center:
+    - 200.0
+    - 0.0
+    layer: null
+    name: o1
+    orientation: 0.0
+    port_type: optical
+    shear_angle: null
+    width: 3.0
+  o2:
+    center:
+    - 0.0
+    - 0.0
+    layer: null
+    name: o2
+    orientation: 180
+    port_type: optical
+    shear_angle: null
+    width: 3.0
+settings:
+  changed: {}
+  child: null
+  default:
+    length: 200.0
+    width1: 3.0
+    width2: 3.0
+  full:
+    length: 200.0
+    width1: 3.0
+    width2: 3.0
+  function_name: rib_to_strip
+  info:
+    length: 200.0
+    width1: 3.0
+    width2: 3.0
+  info_version: 2
+  module: gvtt.components.rib_strip_converter
+  name: rib_to_strip

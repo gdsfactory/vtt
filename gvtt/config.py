@@ -1,4 +1,3 @@
-
 __all__ = ["PATH"]
 
 import pathlib
@@ -16,11 +15,12 @@ repo_path = module_path.parent
 
 
 class Path:
-    layer_lib = module_path / "VTT-layer-list.yaml"
+    layer_lib = module_path / "vtt-layer-list.yaml"
     module = module_path
     repo = repo_path
+    tech_dir = module_path / "klayout"
     lyp = module_path / "klayout" / "layers.lyp"
-    lyp_yaml = module_path / "klayout" / "layers.yaml"
+    lyp_yaml = module_path / "layers.yaml"
     libs = module_path / "vtt3um"
     sparameters = module_path / "sparameters"
 

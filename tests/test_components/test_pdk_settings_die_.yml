@@ -1,0 +1,44 @@
+name: die
+ports: {}
+settings:
+  changed: {}
+  child: null
+  default:
+    bbox_layer: null
+    die_name: chip99
+    draw_corners: true
+    draw_dicing_lane: true
+    layer: null
+    size:
+    - 5000.0
+    - 9500.0
+    street_length: 1000.0
+    street_width: 75.0
+    text_component:
+      function: text
+    text_location: SW
+    text_size: 100.0
+  full:
+    bbox_layer: null
+    die_name: chip99
+    draw_corners: true
+    draw_dicing_lane: true
+    layer: null
+    size:
+    - 5000.0
+    - 9500.0
+    street_length: 1000.0
+    street_width: 75.0
+    text_component:
+      function: text
+    text_location: SW
+    text_size: 100.0
+  function_name: die
+  info:
+    port_x_position_east: 2423.5
+    port_x_position_west: -2423.5
+    port_y_position_north: 4673.5
+    port_y_position_south: -4673.5
+  info_version: 2
+  module: gvtt.components.die
+  name: die
