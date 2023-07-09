@@ -1,8 +1,10 @@
 import gdsfactory as gf
 
-c = gf.Component("training")  # Component can be though to be a canvas to draw on. It maps to GDS cells.
+c = gf.Component(
+    "training"
+)  # Component can be though to be a canvas to draw on. It maps to GDS cells.
 
-# define components using standard gdsfactory functions 
+# define components using standard gdsfactory functions
 str = gf.components.straight(length=10)
 bend = gf.get_component("bend_euler", angle=90, decorator=gf.add_pins.add_pins_triangle)
 

@@ -30,8 +30,8 @@ def arm(angle: float = 90.0) -> gf.Component:
 
     s2.connect("o1", b4.ports["o2"])
 
-    c.add_port("o1", port=s1.ports['o1'])
-    c.add_port("o2", port=s2.ports['o2'])
+    c.add_port("o1", port=s1.ports["o1"])
+    c.add_port("o2", port=s2.ports["o2"])
 
     return c
 
@@ -48,13 +48,13 @@ def mzi():
     mmi1 = c << mmi
     mmi2 = c << mmi
 
-    a1.connect('o1', mmi1.ports['o2'])
-    a2.connect('o1', mmi1.ports['o3'])
+    a1.connect("o1", mmi1.ports["o2"])
+    a2.connect("o1", mmi1.ports["o3"])
 
-    mmi2.connect('o3', a1.ports['o2'])
+    mmi2.connect("o3", a1.ports["o2"])
 
-    c.add_port("o1", port=mmi1.ports['o1'])
-    c.add_port("o2", port=mmi2.ports['o1'])
+    c.add_port("o1", port=mmi1.ports["o1"])
+    c.add_port("o2", port=mmi2.ports["o1"])
 
     return c
 
