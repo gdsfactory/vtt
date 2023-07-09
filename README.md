@@ -1,26 +1,32 @@
 # gdsfactory-vtt-public-pdk
 
-A public [gdsfactory](https://gdsfactory.github.io/gdsfactory/index.html#) process design kit (PDK) for VTT's 3 um SOI
-platform.
+A public [gdsfactory](https://gdsfactory.github.io/gdsfactory/index.html#) process design kit (PDK) for VTT's 3 um SOI platform.
 
 &copy; VTT 2023
 
-## Installation
+### Installation for users
 
-Easiest way to install is by using the [Anaconda](https://www.anaconda.com/download) Python distribution. Download
-the `environment.yml` file in the inder folder and then run in an Anaconda prompt:
+Use python3.10 or python3.11, as some tools like kfactory are not available for older versions of python. We recommend [VSCode](https://code.visualstudio.com/) as an IDE.
 
-    conda env create --file environment.yml
+If you don't have python installed on your system you can [download anaconda](https://www.anaconda.com/download/)
 
-This will create a new Python environment labeled `gf` with all the required packages installed.
-You will need to point your editor Python interpreter to this environment, how to do this depends on the editor.
+Once you have python installed, open Anaconda Prompt as Administrator and then install the latest gdsfactory using pip.
 
-In addition you should install [Klayout](http://www.klayout.de) and the Klive package from the integrated pacakge
-manager.
+![anaconda prompt](https://i.imgur.com/eKk2bbs.png)
+```
+pip install gvtt --upgrade
+```
 
-## Testing the PDK without installation
+Then you need to restart Klayout to make sure the new technology installed appears.
 
-If you want to test the PDK you can run it in browser by clicking the link below.
-This will open up a new page with a preconfigured Jupyter notebook running on [mybinder.org](https://mybinder.org).
+### Installation for developers
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/git/https%3A%2F%2Fgitlab.vtt.fi%2Fttemth%2Fgdsfactory-vtt-public-pdk/HEAD)
+For developers you need to `git clone` the GitHub repository, fork it, git add, git commit, git push and merge request your changes.
+
+```
+git clone https://github.com/gdsfactory/vtt.git
+cd vtt
+pip install -e . pre-commit
+pre-commit install
+python install_tech.py
+```
