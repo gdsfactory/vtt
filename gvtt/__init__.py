@@ -66,7 +66,7 @@ gdsfactory.routing.all_angle.LOW_LOSS_CROSS_SECTIONS = [
 ]
 
 pdk.activate()
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 if __name__ == "__main__":
     # layer_views = LayerViews(filepath=PATH.lyp_yaml)
