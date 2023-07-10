@@ -1,4 +1,4 @@
-# gdsfactory-vtt-public-pdk
+# gdsfactory-vtt-public-pdk 0.0.1
 
 A public [gdsfactory](https://gdsfactory.github.io/gdsfactory/index.html#) process design kit (PDK) for VTT's 3 um SOI platform.
 
