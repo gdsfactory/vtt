@@ -6,6 +6,7 @@ c = gf.Component("training-2")
 # To make reusable elements, you can encapsulate the designs as cells.
 # The cells can be parametrized for further flexibility.
 
+
 @gf.cell
 def arm(angle: float = 90.0) -> gf.Component:
     c = gf.Component(name="arm")
@@ -31,8 +32,8 @@ def arm(angle: float = 90.0) -> gf.Component:
 
     s2.connect("o1", b4.ports["o2"])
 
-    c.add_port("o1", port=s1.ports['o1'])
-    c.add_port("o2", port=s2.ports['o2'])
+    c.add_port("o1", port=s1.ports["o1"])
+    c.add_port("o2", port=s2.ports["o2"])
 
     return c
 

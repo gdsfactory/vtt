@@ -1,0 +1,39 @@
+name: strip_to_rib
+ports:
+  o1:
+    center:
+    - 200.0
+    - 0.0
+    layer: null
+    name: o1
+    orientation: 0.0
+    port_type: optical
+    shear_angle: null
+    width: 3.0
+  o2:
+    center:
+    - 0.0
+    - 0.0
+    layer: null
+    name: o2
+    orientation: 180
+    port_type: optical
+    shear_angle: null
+    width: 3.0
+settings:
+  changed: {}
+  child: null
+  default:
+    width1: 3.0
+    width2: 3.0
+  full:
+    width1: 3.0
+    width2: 3.0
+  function_name: strip_to_rib
+  info:
+    length: 200.0
+    width1: 3.0
+    width2: 3.0
+  info_version: 2
+  module: gvtt.components.transitions
+  name: strip_to_rib

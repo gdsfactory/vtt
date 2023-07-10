@@ -1,8 +1,5 @@
 import gdsfactory as gf
 
-import vtt_tech_public
-
-from gdsfactory.routing.all_angle import auto_taper_connector
 
 c = gf.Component(name="training-5")
 
@@ -32,8 +29,8 @@ def arm():
 
     s2.connect("o1", b4.ports["o2"])
 
-    c.add_port("o1", port=s1.ports['o1'])
-    c.add_port("o2", port=s2.ports['o2'])
+    c.add_port("o1", port=s1.ports["o1"])
+    c.add_port("o2", port=s2.ports["o2"])
 
     return c
 
@@ -50,13 +47,13 @@ def mzi():
     mmi1 = c << mmi
     mmi2 = c << mmi
 
-    a1.connect('o1', mmi1.ports['o2'])
-    a2.connect('o1', mmi1.ports['o3'])
+    a1.connect("o1", mmi1.ports["o2"])
+    a2.connect("o1", mmi1.ports["o3"])
 
-    mmi2.connect('o3', a1.ports['o2'])
+    mmi2.connect("o3", a1.ports["o2"])
 
-    c.add_port("o1", port=mmi1.ports['o1'])
-    c.add_port("o2", port=mmi2.ports['o1'])
+    c.add_port("o1", port=mmi1.ports["o1"])
+    c.add_port("o2", port=mmi2.ports["o1"])
 
     return c
 
@@ -67,9 +64,11 @@ mymzi.x = 0.0
 
 die = c << gf.get_component("die")
 p1 = c << gf.get_component("edge_coupler_rib", pos=-250, die=die)
-p2 = c << gf.get_component("edge_coupler_rib", pos=1000, die=die, side='E')
+p2 = c << gf.get_component("edge_coupler_rib", pos=1000, die=die, side="E")
 
-routes = gf.routing.get_bundle_all_angle([mymzi.ports['o1'], mymzi.ports['o2']], [p1.ports['o1'], p2.ports['o1']])
+routes = gf.routing.get_bundle_all_angle(
+    [mymzi.ports["o1"], mymzi.ports["o2"]], [p1.ports["o1"], p2.ports["o1"]]
+)
 
 for route in routes:
     c.add(route.references)
