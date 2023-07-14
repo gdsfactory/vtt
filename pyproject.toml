@@ -16,7 +16,7 @@ authors = [{name = "gdsfactory community", email = "contact@gdsfactory.com"}]
 keywords = ["python"]
 license = {file = "LICENSE"}
 dependencies = [
-    "gdsfactory==6.113.0",
+    "gdsfactory==6.114.0",
 ]
 readme = "README.md"
 requires-python = ">=3.10"
