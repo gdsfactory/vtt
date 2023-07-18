@@ -1,7 +1,5 @@
 import gdsfactory as gf
 
-c = gf.Component("training-2")
-
 
 # To make reusable elements, you can encapsulate the designs as cells.
 # The cells can be parametrized for further flexibility.
@@ -38,6 +36,7 @@ def arm(angle: float = 90.0) -> gf.Component:
     return c
 
 
-c << arm(angle=45)
-
-c.show()
+if __name__ == "__main__":
+    c = gf.Component("training-2")
+    c << arm(angle=45)
+    c.show()

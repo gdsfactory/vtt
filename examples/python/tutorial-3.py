@@ -1,7 +1,5 @@
 import gdsfactory as gf
 
-c = gf.Component("training-3")
-
 
 @gf.cell
 def arm(angle: float = 90.0) -> gf.Component:
@@ -34,18 +32,20 @@ def arm(angle: float = 90.0) -> gf.Component:
     return c
 
 
-a1 = c << arm()
-a2 = c << arm()
-a2.mirror()
+if __name__ == "__main__":
+    c = gf.Component("training-3")
+    a1 = c << arm()
+    a2 = c << arm()
+    a2.mirror()
 
-mmi = gf.get_component("mmi1x2")
+    mmi = gf.get_component("mmi1x2")
 
-mmi1 = c << mmi
-mmi2 = c << mmi
+    mmi1 = c << mmi
+    mmi2 = c << mmi
 
-a1.connect("o1", mmi1.ports["o2"])
-a2.connect("o1", mmi1.ports["o3"])
+    a1.connect("o1", mmi1.ports["o2"])
+    a2.connect("o1", mmi1.ports["o3"])
 
-mmi2.connect("o3", a1.ports["o2"])
+    mmi2.connect("o3", a1.ports["o2"])
 
-c.show()
+    c.show()

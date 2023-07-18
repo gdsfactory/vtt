@@ -1,9 +1,5 @@
 import gdsfactory as gf
 
-# import vtt_tech_public
-
-c = gf.Component("training-4")
-
 
 @gf.cell
 def arm(angle: float = 90.0) -> gf.Component:
@@ -37,7 +33,7 @@ def arm(angle: float = 90.0) -> gf.Component:
 
 
 @gf.cell
-def mzi():
+def mzi() -> gf.Component:
     c = gf.Component("mzi")
     a1 = c << arm()
     a2 = c << arm()
@@ -59,6 +55,7 @@ def mzi():
     return c
 
 
-mymzi = c << mzi()
-
-c.show()
+if __name__ == "__main__":
+    c = gf.Component("training-4")
+    mymzi = c << mzi()
+    c.show()

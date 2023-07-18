@@ -1,22 +1,19 @@
 import gdsfactory as gf
 
 
-c = gf.Component(name="training-5")
-
-
 @gf.cell
 def arm():
     c = gf.Component(name="arm")
 
-    str = gf.components.straight(length=10)
+    straight = gf.components.straight(length=10)
     bend = gf.get_component("bend_euler", angle=90)
 
-    s1 = c << str
+    s1 = c << straight
     b1 = c << bend
     b2 = c << bend
     b3 = c << bend
     b4 = c << bend
-    s2 = c << str
+    s2 = c << straight
 
     s1.connect("o2", b1.ports["o1"])
 
@@ -58,19 +55,21 @@ def mzi():
     return c
 
 
-mymzi = c << mzi()
-mymzi.rotate(45)
-mymzi.x = 0.0
+if __name__ == "__main__":
+    c = gf.Component(name="training-5")
+    mymzi = c << mzi()
+    mymzi.rotate(45)
+    mymzi.x = 0.0
 
-die = c << gf.get_component("die")
-p1 = c << gf.get_component("edge_coupler_rib", pos=-250, die=die)
-p2 = c << gf.get_component("edge_coupler_rib", pos=1000, die=die, side="E")
+    die = c << gf.get_component("die")
+    p1 = c << gf.get_component("edge_coupler_rib", pos=-250, die=die)
+    p2 = c << gf.get_component("edge_coupler_rib", pos=1000, die=die, side="E")
 
-routes = gf.routing.get_bundle_all_angle(
-    [mymzi.ports["o1"], mymzi.ports["o2"]], [p1.ports["o1"], p2.ports["o1"]]
-)
+    routes = gf.routing.get_bundle_all_angle(
+        [mymzi.ports["o1"], mymzi.ports["o2"]], [p1.ports["o1"], p2.ports["o1"]]
+    )
 
-for route in routes:
-    c.add(route.references)
+    for route in routes:
+        c.add(route.references)
 
-c.show()
+    c.show()
