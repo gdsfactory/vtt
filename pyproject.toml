@@ -24,7 +24,6 @@ version = "0.0.2"
 
 [project.optional-dependencies]
 dev = [
-  "gdsfactory[full]==6.115.0",
   "pre-commit",
   "pytest",
   "pytest-cov",
