@@ -62,7 +62,7 @@ Cells
   import gvtt
 
   c = gvtt.components.{name}({kwargs})
-  c.plot_matplotlib()
+  c.plot()
 
 """
             )
