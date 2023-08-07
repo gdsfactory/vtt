@@ -1,11 +1,11 @@
 import pathlib
-import pytest
-from pytest_regressions.data_regression import DataRegressionFixture
 
+import pytest
 from gdsfactory.component import Component
 from gdsfactory.difftest import difftest
-from gvtt import cells
+from pytest_regressions.data_regression import DataRegressionFixture
 
+from gvtt import cells
 
 skip_test = {}
 cell_names = set(cells.keys()) - set(skip_test)

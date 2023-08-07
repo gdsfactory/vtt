@@ -1,9 +1,7 @@
-from typing import Optional
-
 import gdsfactory as gf
 from gdsfactory.component import Component
 from gdsfactory.components.taper_cross_section import taper_cross_section
-from gdsfactory.cross_section import Section, CrossSection, LayerSpec
+from gdsfactory.cross_section import CrossSection, LayerSpec, Section
 
 from gvtt.xsections import rib, strip
 
@@ -14,7 +12,7 @@ def xs_rib_strip(
     width_trench: float = 10.0,
     width_deep: float = 10.75,
     dist_deep: float = 3.0,
-    wg_marking_layer: Optional[LayerSpec] = None,
+    wg_marking_layer: LayerSpec | None = None,
     **kwargs,
 ) -> CrossSection:
     """Return CrossSection of strip waveguide defined by trenches."""
@@ -65,7 +63,7 @@ def rib_to_strip(
     rib_strip_1 = xs_rib_strip(width=3.0, width_deep=0.5)  # rib end
     rib_strip_2 = xs_rib_strip(width=3.0, dist_deep=-0.25)  # strip end
 
-    cn = c << gf.components.taper_cross_section.taper_cross_section(
+    cn = c << gf.components.taper_cross_section(
         cross_section1=rib_strip_1,
         cross_section2=rib_strip_2,
         linear=True,
@@ -104,7 +102,7 @@ def strip_taper(
     width1=1,
     width2=1,
     taper_ratio=25.0,
-    length: Optional[float] = None,
+    length: float | None = None,
     **kwargs,
 ) -> Component:
     """
@@ -134,7 +132,7 @@ def rib_taper(
     width1=1,
     width2=1,
     taper_ratio=50.0,
-    length: Optional[float] = None,
+    length: float | None = None,
     **kwargs,
 ) -> Component:
     """

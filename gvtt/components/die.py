@@ -1,8 +1,6 @@
-from typing import Optional, Tuple, Union
-
 import gdsfactory as gf
 from gdsfactory.components.text import text
-from gdsfactory.typings import LayerSpec, ComponentSpec, Float2
+from gdsfactory.typings import ComponentSpec, Float2, LayerSpec
 
 import gvtt
 
@@ -20,14 +18,14 @@ def box(x0, y0, w, h):
 
 @gf.cell
 def die(
-    size: Tuple[float, float] = (5000.0, 9500.0),
+    size: tuple[float, float] = (5000.0, 9500.0),
     street_width: float = 75.0,
     street_length: float = 1000.0,
-    die_name: Optional[str] = "chip99",
+    die_name: str | None = "chip99",
     text_size: float = 100.0,
-    text_location: Union[str, Float2] = "SW",
+    text_location: str | Float2 = "SW",
     layer: LayerSpec = None,  # "FLOORPLAN",
-    bbox_layer: Optional[LayerSpec] = None,
+    bbox_layer: LayerSpec | None = None,
     draw_corners: bool = True,
     draw_dicing_lane: bool = True,
     text_component: ComponentSpec = text,

@@ -1,6 +1,5 @@
 import gdsfactory as gf
 
-
 # To make reusable elements, you can encapsulate the designs as cells.
 # The cells can be parametrized for further flexibility.
 

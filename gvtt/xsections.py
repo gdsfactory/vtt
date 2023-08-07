@@ -2,14 +2,14 @@
 import sys
 
 import gdsfactory as gf
-from typing import Optional
 from gdsfactory.cross_section import (
-    get_cross_section_factories,
     CrossSection,
     LayerSpec,
-    xsection,
     Section,
+    get_cross_section_factories,
+    xsection,
 )
+
 from gvtt.layers import LAYER
 
 
@@ -81,7 +81,7 @@ def strip(
 def vttstrip(
     width: float = 1.875,
     width_trench: float = 10.0,
-    wg_marking_layer: Optional[LayerSpec] = LAYER.TYPE_STRIP,
+    wg_marking_layer: LayerSpec | None = LAYER.TYPE_STRIP,
     **kwargs,
 ) -> CrossSection:
     """Return CrossSection of strip waveguide defined by trenches."""
