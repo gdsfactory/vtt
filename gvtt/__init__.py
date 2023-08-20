@@ -45,7 +45,7 @@ LAYER_TRANSITIONS = {
 
 LAYER_VIEWS = None  # LayerViews(filepath=PATH.klayout_yaml)
 
-pdk = Pdk(
+PDK = Pdk(
     name="VTT-3umSOI",
     cells=cells,
     cross_sections=cross_sections,
@@ -65,11 +65,11 @@ gdsfactory.routing.all_angle.LOW_LOSS_CROSS_SECTIONS = [
     {"cross_section": "strip", "settings": {"width": 3.0}},
 ]
 
-pdk.activate()
+PDK.activate()
 __version__ = "0.0.2"
 
 if __name__ == "__main__":
     # layer_views = LayerViews(filepath=PATH.lyp_yaml)
     # layer_views.to_lyp(PATH.lyp)
 
-    print(pdk.name)
+    print(PDK.name)
