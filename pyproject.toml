@@ -12,7 +12,7 @@ classifiers = [
   "Operating System :: OS Independent"
 ]
 dependencies = [
-  "gdsfactory[cad]==7.3.1"
+  "gdsfactory[cad]==7.4.6"
 ]
 description = "gdsfactory VTT PDK"
 keywords = ["python"]
@@ -72,6 +72,7 @@ python_files = ["gvtt/*.py", "notebooks/*.ipynb", "tests/*.py"]
 testpaths = ["gvtt/", "tests"]
 
 [tool.ruff]
+fix = true
 ignore = [
   "E501",  # line too long, handled by black
   "B008",  # do not perform function calls in argument defaults

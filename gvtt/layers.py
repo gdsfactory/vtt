@@ -1,8 +1,8 @@
+from gdsfactory.technology import LayerMap
 from gdsfactory.typings import Layer
-from pydantic import BaseModel
 
 
-class LayerMap(BaseModel):
+class LayerMap(LayerMap):
     # waveguide types
     TYPE_RIB: Layer = (89, 0)
     TYPE_STRIP: Layer = (89, 1)
@@ -86,10 +86,6 @@ class LayerMap(BaseModel):
     TE: Layer = (203, 0)
     TM: Layer = (204, 0)
     TEXT: Layer = (66, 0)
-
-    class Config:
-        frozen = True
-        extra = "forbid"
 
 
 LAYER = LayerMap()

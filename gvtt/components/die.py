@@ -24,7 +24,7 @@ def die(
     die_name: str | None = "chip99",
     text_size: float = 100.0,
     text_location: str | Float2 = "SW",
-    layer: LayerSpec = None,  # "FLOORPLAN",
+    layer: LayerSpec | None = None,  # "FLOORPLAN",
     bbox_layer: LayerSpec | None = None,
     draw_corners: bool = True,
     draw_dicing_lane: bool = True,

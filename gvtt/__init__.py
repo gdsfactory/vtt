@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import gdsfactory
+from gdsfactory.config import PATH as GPATH
 from gdsfactory.get_factories import get_cells
 from gdsfactory.pdk import Pdk, constants
 
@@ -49,13 +50,14 @@ PDK = Pdk(
     name="VTT-3umSOI",
     cells=cells,
     cross_sections=cross_sections,
-    layers=LAYER.dict(),
+    layers=dict(LAYER),
     layer_stack=None,
     layer_views=LAYER_VIEWS,
     layer_transitions=LAYER_TRANSITIONS,
-    sparameters_path=PATH.sparameters,
     constants=constants,
 )
+
+GPATH.sparameters = PATH.sparameters
 
 # pdk.register_cells_yaml(dirpath=pathlib.Path(__file__).parent.absolute())
 
