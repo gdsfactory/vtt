@@ -29,7 +29,7 @@ settings:
   child: null
   default:
     angle: 90.0
-    cross_section: strip
+    cross_section: xs_sc
     direction: ccw
     npoints: null
     p: 1.0
@@ -37,7 +37,7 @@ settings:
     with_bbox: true
   full:
     angle: 90.0
-    cross_section: strip
+    cross_section: xs_sc
     direction: ccw
     npoints: null
     p: 1.0
@@ -46,16 +46,9 @@ settings:
   function_name: bend_euler
   info:
     dy: 100.379
-    function_name: strip
     length: 168.628
     radius: 100.379
     radius_min: 53.676
-    settings:
-      wg_marking_layer:
-      - 89
-      - 1
-      width: 1.875
-      width_trench: 10.0
     width: 1.875
   info_version: 2
   module: gvtt.components.bend_euler

@@ -24,7 +24,7 @@ def bend_euler(
     npoints: Optional[int] = None,
     direction: str = "ccw",
     with_bbox: bool = True,
-    cross_section: CrossSectionSpec = "strip",
+    cross_section: CrossSectionSpec = "xs_sc",
     **kwargs,
 ) -> Component:
     """Returns an euler bend that transitions from straight to curved.

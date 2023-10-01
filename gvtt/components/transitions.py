@@ -1,12 +1,16 @@
 import gdsfactory as gf
 from gdsfactory.component import Component
 from gdsfactory.components.taper_cross_section import taper_cross_section
-from gdsfactory.cross_section import CrossSection, LayerSpec, Section
+from gdsfactory.cross_section import (
+    CrossSection,
+    LayerSpec,
+    Section,
+    cross_section,
+)
 
 from gvtt.xsections import rib, strip
 
 
-@gf.xsection
 def xs_rib_strip(
     width: float = 3.0,
     width_trench: float = 10.0,
@@ -40,7 +44,7 @@ def xs_rib_strip(
         ),
     ]
 
-    return CrossSection(
+    return cross_section(
         width=width,
         layer=wg_marking_layer,
         sections=tuple(sections),
@@ -117,7 +121,6 @@ def strip_taper(
         cross_section2=strip(width2),
         linear=True,
         npoints=2,
-        **kwargs,
     )
     c.info["length"] = length
     c.info["width1"] = float(width1)

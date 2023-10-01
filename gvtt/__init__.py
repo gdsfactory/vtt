@@ -63,8 +63,8 @@ GPATH.sparameters = PATH.sparameters
 
 gdsfactory.routing.all_angle.LOW_LOSS_CROSS_SECTIONS = [
     {"cross_section": "rib", "settings": {"width": 2.5}},
-    {"cross_section": "strip", "settings": {"width": 6.0}},
-    {"cross_section": "strip", "settings": {"width": 3.0}},
+    {"cross_section": "xs_sc", "settings": {"width": 6.0}},
+    {"cross_section": "xs_sc", "settings": {"width": 3.0}},
 ]
 
 PDK.activate()

@@ -6,21 +6,27 @@ from gdsfactory.cross_section import (
     CrossSection,
     LayerSpec,
     Section,
-    get_cross_section_factories,
-    xsection,
+    cross_section,
+    get_cross_sections,
 )
 
 from gvtt.layers import LAYER
 
 
-@xsection
 def rib(
     width: float = 2.5,
     width_trench: float = 10.0,
     wg_marking_layer: LayerSpec = LAYER.TYPE_RIB,
     **kwargs,
 ) -> CrossSection:
-    """Return CrossSection of rib waveguide defined by trenches."""
+    """Return CrossSection of rib waveguide defined by trenches.
+
+    Args:
+        width: waveguide width.
+        width_trench: trench width.
+        wg_marking_layer: layer for waveguide marking.
+        kwargs: cross_section arguments.
+    """
 
     sections = kwargs.pop("sections", [])
     sections += [
@@ -33,7 +39,7 @@ def rib(
         ),
     ]
 
-    return CrossSection(
+    return cross_section(
         width=width,
         layer=wg_marking_layer,
         sections=tuple(sections),
@@ -42,14 +48,20 @@ def rib(
     )
 
 
-@xsection
 def strip(
     width: float = 1.875,
     width_trench: float = 10.0,
     wg_marking_layer: LayerSpec = LAYER.TYPE_STRIP,
     **kwargs,
 ) -> CrossSection:
-    """Return CrossSection of strip waveguide defined by trenches."""
+    """Return CrossSection of strip waveguide defined by trenches.
+
+    Args:
+        width: waveguide width.
+        width_trench: trench width.
+        wg_marking_layer: layer for waveguide marking.
+        kwargs: cross_section arguments.
+    """
 
     sections = kwargs.pop("sections", [])
     sections += [
@@ -68,7 +80,7 @@ def strip(
         ),
     ]
 
-    return CrossSection(
+    return cross_section(
         width=width,
         layer=wg_marking_layer,
         sections=tuple(sections),
@@ -77,7 +89,6 @@ def strip(
     )
 
 
-@xsection
 def vttstrip(
     width: float = 1.875,
     width_trench: float = 10.0,
@@ -103,7 +114,7 @@ def vttstrip(
         ),
     ]
 
-    return CrossSection(
+    return cross_section(
         width=width,
         layer=wg_marking_layer,
         sections=tuple(sections),
@@ -113,8 +124,9 @@ def vttstrip(
 
 
 sm_rib = rib(width=2.5)
-euler_strip = strip(width=1.875)
-cross_sections = get_cross_section_factories(sys.modules[__name__])
+xs_sc = euler_strip = strip(width=1.875)
+
+cross_sections = get_cross_sections(sys.modules[__name__])
 
 if __name__ == "__main__":
     print(cross_sections.keys())

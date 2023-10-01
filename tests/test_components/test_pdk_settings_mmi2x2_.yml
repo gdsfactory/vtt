@@ -1,4 +1,4 @@
-name: mmi2x2_426a4478
+name: mmi2x2_022b9f24
 ports:
   o1:
     center:
@@ -51,7 +51,76 @@ ports:
 settings:
   changed:
     cross_section:
-      function: strip
+      add_pins_function_module: gdsfactory.add_pins
+      add_pins_function_name: null
+      auto_widen: false
+      auto_widen_minimum_length: 200.0
+      bbox_layers: null
+      bbox_offsets: null
+      components_along_path: []
+      end_straight_length: 0.01
+      gap: 3.0
+      info: {}
+      min_length: 0.01
+      radius: 10.0
+      sections:
+      - hidden: false
+        insets: null
+        layer:
+        - 89
+        - 1
+        name: null
+        offset: 0.0
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        simplify: null
+        width: 1.875
+      - hidden: false
+        insets: null
+        layer: WG_RIBS_SUB
+        name: WG
+        offset: 0
+        port_names:
+        - null
+        - null
+        port_types:
+        - optical
+        - optical
+        simplify: null
+        width: 1.875
+      - hidden: false
+        insets: null
+        layer: WG_RIBS_ADD
+        name: trench
+        offset: 0
+        port_names:
+        - null
+        - null
+        port_types:
+        - optical
+        - optical
+        simplify: null
+        width: 21.875
+      - hidden: false
+        insets: null
+        layer: WG_MOST_ADD
+        name: trench_2
+        offset: 0
+        port_names:
+        - null
+        - null
+        port_types:
+        - optical
+        - optical
+        simplify: null
+        width: 22.875
+      start_straight_length: 0.01
+      taper_length: 10.0
+      width_wide: null
     gap_mmi: 1.25
     length_mmi: 112.0
     length_taper: 1.0
@@ -61,7 +130,7 @@ settings:
     width_taper: 1.875
   child: null
   default:
-    cross_section: strip
+    cross_section: xs_sc
     gap_mmi: 0.25
     length_mmi: 5.5
     length_taper: 10.0
@@ -75,7 +144,76 @@ settings:
     with_bbox: true
   full:
     cross_section:
-      function: strip
+      add_pins_function_module: gdsfactory.add_pins
+      add_pins_function_name: null
+      auto_widen: false
+      auto_widen_minimum_length: 200.0
+      bbox_layers: null
+      bbox_offsets: null
+      components_along_path: []
+      end_straight_length: 0.01
+      gap: 3.0
+      info: {}
+      min_length: 0.01
+      radius: 10.0
+      sections:
+      - hidden: false
+        insets: null
+        layer:
+        - 89
+        - 1
+        name: null
+        offset: 0.0
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        simplify: null
+        width: 1.875
+      - hidden: false
+        insets: null
+        layer: WG_RIBS_SUB
+        name: WG
+        offset: 0
+        port_names:
+        - null
+        - null
+        port_types:
+        - optical
+        - optical
+        simplify: null
+        width: 1.875
+      - hidden: false
+        insets: null
+        layer: WG_RIBS_ADD
+        name: trench
+        offset: 0
+        port_names:
+        - null
+        - null
+        port_types:
+        - optical
+        - optical
+        simplify: null
+        width: 21.875
+      - hidden: false
+        insets: null
+        layer: WG_MOST_ADD
+        name: trench_2
+        offset: 0
+        port_names:
+        - null
+        - null
+        port_types:
+        - optical
+        - optical
+        simplify: null
+        width: 22.875
+      start_straight_length: 0.01
+      taper_length: 10.0
+      width_wide: null
     gap_mmi: 1.25
     length_mmi: 112.0
     length_taper: 1.0
@@ -91,4 +229,4 @@ settings:
   info: {}
   info_version: 2
   module: gdsfactory.components.mmi2x2
-  name: mmi2x2_426a4478
+  name: mmi2x2_022b9f24
