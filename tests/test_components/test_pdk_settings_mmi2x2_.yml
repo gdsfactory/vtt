@@ -1,4 +1,4 @@
-name: mmi2x2_022b9f24
+name: mmi2x2_0e945212
 ports:
   o1:
     center:
@@ -63,14 +63,16 @@ settings:
       info: {}
       min_length: 0.01
       radius: 10.0
+      radius_min: null
       sections:
       - hidden: false
         insets: null
         layer:
         - 89
         - 1
-        name: null
+        name: _default
         offset: 0.0
+        offset_function: null
         port_names:
         - o1
         - o2
@@ -79,11 +81,13 @@ settings:
         - optical
         simplify: null
         width: 1.875
+        width_function: null
       - hidden: false
         insets: null
         layer: WG_RIBS_SUB
         name: WG
         offset: 0
+        offset_function: null
         port_names:
         - null
         - null
@@ -92,11 +96,13 @@ settings:
         - optical
         simplify: null
         width: 1.875
+        width_function: null
       - hidden: false
         insets: null
         layer: WG_RIBS_ADD
         name: trench
         offset: 0
+        offset_function: null
         port_names:
         - null
         - null
@@ -105,11 +111,13 @@ settings:
         - optical
         simplify: null
         width: 21.875
+        width_function: null
       - hidden: false
         insets: null
         layer: WG_MOST_ADD
         name: trench_2
         offset: 0
+        offset_function: null
         port_names:
         - null
         - null
@@ -118,6 +126,7 @@ settings:
         - optical
         simplify: null
         width: 22.875
+        width_function: null
       start_straight_length: 0.01
       taper_length: 10.0
       width_wide: null
@@ -156,14 +165,16 @@ settings:
       info: {}
       min_length: 0.01
       radius: 10.0
+      radius_min: null
       sections:
       - hidden: false
         insets: null
         layer:
         - 89
         - 1
-        name: null
+        name: _default
         offset: 0.0
+        offset_function: null
         port_names:
         - o1
         - o2
@@ -172,11 +183,13 @@ settings:
         - optical
         simplify: null
         width: 1.875
+        width_function: null
       - hidden: false
         insets: null
         layer: WG_RIBS_SUB
         name: WG
         offset: 0
+        offset_function: null
         port_names:
         - null
         - null
@@ -185,11 +198,13 @@ settings:
         - optical
         simplify: null
         width: 1.875
+        width_function: null
       - hidden: false
         insets: null
         layer: WG_RIBS_ADD
         name: trench
         offset: 0
+        offset_function: null
         port_names:
         - null
         - null
@@ -198,11 +213,13 @@ settings:
         - optical
         simplify: null
         width: 21.875
+        width_function: null
       - hidden: false
         insets: null
         layer: WG_MOST_ADD
         name: trench_2
         offset: 0
+        offset_function: null
         port_names:
         - null
         - null
@@ -211,6 +228,7 @@ settings:
         - optical
         simplify: null
         width: 22.875
+        width_function: null
       start_straight_length: 0.01
       taper_length: 10.0
       width_wide: null
@@ -229,4 +247,4 @@ settings:
   info: {}
   info_version: 2
   module: gdsfactory.components.mmi2x2
-  name: mmi2x2_022b9f24
+  name: mmi2x2_0e945212
