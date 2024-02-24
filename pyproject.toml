@@ -12,7 +12,7 @@ classifiers = [
   "Operating System :: OS Independent"
 ]
 dependencies = [
-  "gdsfactory[cad]==7.9.2"
+  "gdsfactory[cad]==7.13.0"
 ]
 description = "gdsfactory VTT PDK"
 keywords = ["python"]
@@ -32,7 +32,7 @@ dev = [
 docs = [
   "autodoc_pydantic",
   "jupytext",
-  "jupyter-book==0.15.1"
+  "jupyter-book>=0.15.1,<1.1",
 ]
 
 [tool.black]
