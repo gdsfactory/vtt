@@ -12,6 +12,15 @@ def edge_coupler_rib(
     xpos: float = 0.0,
     ypos: float = 0.0,
 ) -> Component:
+    """Returns a rib waveguide edge coupler.
+
+    Args:
+        edge_coupling_width: width of the edge coupling waveguide.
+        polishing_length: length of the edge coupling waveguide.
+        side: side of the edge coupler (W, E, N, S).
+        xpos: x position of the edge coupler.
+        ypos: y position of the edge coupler.
+    """
     c = gf.Component()
     side = side.upper()
 

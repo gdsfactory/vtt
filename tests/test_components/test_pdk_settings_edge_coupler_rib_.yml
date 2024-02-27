@@ -1,34 +1,10 @@
+function: edge_coupler_rib
+info: {}
+module: gvtt.components.edge_coupler_rib
 name: edge_coupler_rib
-ports:
-  o1:
-    center:
-    - 25.0
-    - 0.0
-    layer:
-    - 89
-    - 0
-    name: o1
-    orientation: 0.0
-    port_type: optical
-    shear_angle: null
-    width: 3.0
 settings:
-  changed: {}
-  child: null
-  default:
-    edge_coupling_width: 3.0
-    polishing_length: 25.0
-    side: W
-    xpos: 0.0
-    ypos: 0.0
-  full:
-    edge_coupling_width: 3.0
-    polishing_length: 25.0
-    side: W
-    xpos: 0.0
-    ypos: 0.0
-  function_name: edge_coupler_rib
-  info: {}
-  info_version: 2
-  module: gvtt.components.edge_coupler_rib
-  name: edge_coupler_rib
+  edge_coupling_width: 3.0
+  polishing_length: 25.0
+  side: W
+  xpos: 0.0
+  ypos: 0.0

@@ -1,47 +1,12 @@
+function: strip_taper
+info:
+  length: 0.01
+  width1: 1.0
+  width2: 1.0
+module: gvtt.components.transitions
 name: strip_taper
-ports:
-  o1:
-    center:
-    - 0.0
-    - 0.0
-    layer:
-    - 89
-    - 1
-    name: o1
-    orientation: 180.0
-    port_type: optical
-    shear_angle: null
-    width: 1.0
-  o2:
-    center:
-    - 10.0
-    - 0.0
-    layer:
-    - 89
-    - 1
-    name: o2
-    orientation: 0.0
-    port_type: optical
-    shear_angle: null
-    width: 1.0
 settings:
-  changed: {}
-  child: null
-  default:
-    length: null
-    taper_ratio: 25.0
-    width1: 1
-    width2: 1
-  full:
-    length: null
-    taper_ratio: 25.0
-    width1: 1
-    width2: 1
-  function_name: strip_taper
-  info:
-    length: 0.01
-    width1: 1.0
-    width2: 1.0
-  info_version: 2
-  module: gvtt.components.transitions
-  name: strip_taper
+  length: null
+  taper_ratio: 25.0
+  width1: 1
+  width2: 1

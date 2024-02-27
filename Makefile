@@ -1,11 +1,10 @@
 
 install:
-	pip install -e .[dev]
+	pip install -e .[dev,docs]
 	pre-commit install
 
 dev:
 	pip install -e .[dev,docs]
-
 
 test:
 	pytest -s
