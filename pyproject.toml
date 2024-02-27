@@ -32,7 +32,7 @@ dev = [
 docs = [
   "autodoc_pydantic",
   "jupytext",
-  "jupyter-book>=0.15.1,<1.1",
+  "jupyter-book>=0.15.1,<1.1"
 ]
 
 [tool.black]
