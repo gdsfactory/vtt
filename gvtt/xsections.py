@@ -1,4 +1,5 @@
-""" technology definitions."""
+"""technology definitions."""
+
 import sys
 from functools import partial
 

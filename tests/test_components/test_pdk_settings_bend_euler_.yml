@@ -1,55 +1,17 @@
+function: bend_euler
+info:
+  dy: 100.379
+  length: 168.628
+  radius: 100.37938314613233
+  radius_min: 53.676
+  width: 1.875
+module: gvtt.components.bend_euler
 name: bend_euler
-ports:
-  o1:
-    center:
-    - 0.0
-    - 0.0
-    layer:
-    - 89
-    - 1
-    name: o1
-    orientation: 180.0
-    port_type: optical
-    shear_angle: null
-    width: 1.875
-  o2:
-    center:
-    - 100.379
-    - 100.379
-    layer:
-    - 89
-    - 1
-    name: o2
-    orientation: 90.0
-    port_type: optical
-    shear_angle: null
-    width: 1.875
 settings:
-  changed: {}
-  child: null
-  default:
-    angle: 90.0
-    cross_section: xs_sc
-    direction: ccw
-    npoints: null
-    p: 1.0
-    with_arc_floorplan: false
-    with_bbox: true
-  full:
-    angle: 90.0
-    cross_section: xs_sc
-    direction: ccw
-    npoints: null
-    p: 1.0
-    with_arc_floorplan: false
-    with_bbox: true
-  function_name: bend_euler
-  info:
-    dy: 100.379
-    length: 168.628
-    radius: 100.379
-    radius_min: 53.676
-    width: 1.875
-  info_version: 2
-  module: gvtt.components.bend_euler
-  name: bend_euler
+  angle: 90.0
+  cross_section: xs_sc
+  direction: ccw
+  npoints: null
+  p: 1.0
+  with_arc_floorplan: false
+  with_bbox: true

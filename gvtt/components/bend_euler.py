@@ -79,9 +79,6 @@ def bend_euler(
     c.info["radius"] = float(p.xmax)
     c.info["width"] = float(x.width)
 
-    if x.info:
-        c.info.update(x.info)
-
     if with_bbox and x.bbox_layers:
         padding = []
         angle = int(angle)

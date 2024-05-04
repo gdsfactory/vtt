@@ -1,20 +1,12 @@
 function: mmi2x2
 info: {}
 module: gdsfactory.components.mmi2x2
-name: mmi2x2_0e945212
+name: mmi2x2_55c4183e
 settings:
   cross_section:
-    add_pins_function_module: gdsfactory.add_pins
-    add_pins_function_name: null
-    auto_widen: false
-    auto_widen_minimum_length: 200.0
     bbox_layers: null
     bbox_offsets: null
     components_along_path: []
-    end_straight_length: 0.01
-    gap: 3.0
-    info: {}
-    min_length: 0.01
     radius: 10.0
     radius_min: null
     sections:
@@ -80,18 +72,11 @@ settings:
       simplify: null
       width: 22.875
       width_function: null
-    start_straight_length: 0.01
-    taper_length: 10.0
-    width_wide: null
   gap_mmi: 1.25
   length_mmi: 112.0
   length_taper: 1.0
-  post_process: null
-  straight:
-    function: straight
   taper:
     function: strip_taper
   width: null
   width_mmi: 5.0
   width_taper: 1.875
-  with_bbox: true
