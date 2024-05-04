@@ -26,3 +26,9 @@ jobs:
         run: |
           make build
           twine upload dist/*
+      - name: Publish Latest Draft
+        run: |
+          gh release edit ${{ github.ref_name }} --draft=false
+          gh release upload ${{ github.ref_name }} dist/gvtt-${{ github.ref_name}}-py3-none-any.whl --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

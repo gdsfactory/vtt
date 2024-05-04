@@ -1,457 +1,269 @@
 LayerViews:
   WG_RIBS_ADD:
     layer: [1, 10]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#262262', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.14901960784313725, g: 0.13333333333333333, b: 0.3843137254901961,
-                alpha: null, _tuple: [0.14901960784313725, 0.13333333333333333, 0.3843137254901961,
-                  null]}]}}]
+    color: "#262262"
+    hatch_pattern: coarsely dotted
   WG_MOST_ADD:
     layer: [1, 11]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00aeef', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6823529411764706, b: 0.9372549019607843, alpha: null,
-                _tuple: [0.0, 0.6823529411764706, 0.9372549019607843, null]}]}}]
+    color: "#00aeef"
+    hatch_pattern: coarsely dotted
   WG_LANE_ADD:
     layer: [1, 12]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   WG_DEOX_ADD:
     layer: [1, 13]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#ef4036', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9372549019607843, g: 0.25098039215686274, b: 0.21176470588235294,
-                alpha: null, _tuple: [0.9372549019607843, 0.25098039215686274, 0.21176470588235294,
-                  null]}]}}]
+    color: "#ef4036"
+    hatch_pattern: coarsely dotted
   WG_ARCO_ADD:
     layer: [1, 14]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#92278f', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5725490196078431, g: 0.15294117647058825, b: 0.5607843137254902,
-                alpha: null, _tuple: [0.5725490196078431, 0.15294117647058825, 0.5607843137254902,
-                  null]}]}}]
+    color: "#92278f"
+    hatch_pattern: coarsely dotted
   WG_SNGL_ADD:
     layer: [1, 15]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00a651', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6509803921568628, b: 0.3176470588235294, alpha: null,
-                _tuple: [0.0, 0.6509803921568628, 0.3176470588235294, null]}]}}]
+    color: "#00a651"
+    hatch_pattern: coarsely dotted
   WG_PEDE_ADD:
     layer: [1, 16]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#8b5e3b', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5450980392156862, g: 0.3686274509803922, b: 0.23137254901960785,
-                alpha: null, _tuple: [0.5450980392156862, 0.3686274509803922, 0.23137254901960785,
-                  null]}]}}]
+    color: "#8b5e3b"
+    hatch_pattern: coarsely dotted
   WG_RIBS_SUB:
     layer: [1, 20]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#191741', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.09803921568627451, g: 0.09019607843137255, b: 0.2549019607843137,
-                alpha: null, _tuple: [0.09803921568627451, 0.09019607843137255, 0.2549019607843137,
-                  null]}]}}]
+    color: "#191741"
+    hatch_pattern: coarsely dotted
   WG_MOST_SUB:
     layer: [1, 21]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#008bbe', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.5450980392156862, b: 0.7450980392156863, alpha: null,
-                _tuple: [0.0, 0.5450980392156862, 0.7450980392156863, null]}]}}]
+    color: "#008bbe"
+    hatch_pattern: coarsely dotted
   WG_LANE_SUB:
     layer: [1, 22]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#7e6b0d', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.49411764705882355, g: 0.4196078431372549, b: 0.050980392156862744,
-                alpha: null, _tuple: [0.49411764705882355, 0.4196078431372549, 0.050980392156862744,
-                  null]}]}}]
+    color: "#7e6b0d"
+    hatch_pattern: coarsely dotted
   WG_DEOX_SUB:
     layer: [1, 23]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#e61e12', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9019607843137255, g: 0.11764705882352941, b: 0.07058823529411765,
-                alpha: null, _tuple: [0.9019607843137255, 0.11764705882352941, 0.07058823529411765,
-                  null]}]}}]
+    color: "#e61e12"
+    hatch_pattern: coarsely dotted
   WG_ARCO_SUB:
     layer: [1, 24]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#6c1d69', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.4235294117647059, g: 0.11372549019607843, b: 0.4117647058823529,
-                alpha: null, _tuple: [0.4235294117647059, 0.11372549019607843, 0.4117647058823529,
-                  null]}]}}]
+    color: "#6c1d69"
+    hatch_pattern: coarsely dotted
   WG_SNGL_SUB:
     layer: [1, 25]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00773a', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.4666666666666667, b: 0.22745098039215686,
-                alpha: null, _tuple: [0.0, 0.4666666666666667, 0.22745098039215686,
-                  null]}]}}]
+    color: "#00773a"
+    hatch_pattern: coarsely dotted
   WG_PEDE_SUB:
     layer: [1, 26]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#69472c', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.4117647058823529, g: 0.2784313725490196, b: 0.17254901960784313,
-                alpha: null, _tuple: [0.4117647058823529, 0.2784313725490196, 0.17254901960784313,
-                  null]}]}}]
+    color: "#69472c"
+    hatch_pattern: coarsely dotted
   WG_RIBS_CPY:
     layer: [1, 30]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#9792d9', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.592156862745098, g: 0.5725490196078431, b: 0.8509803921568627,
-                alpha: null, _tuple: [0.592156862745098, 0.5725490196078431, 0.8509803921568627,
-                  null]}]}}]
+    color: "#9792d9"
+    hatch_pattern: coarsely dotted
   WG_MOST_CPY:
     layer: [1, 31]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#a7e7ff', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6549019607843137, g: 0.9058823529411765, b: 1.0, alpha: null,
-                _tuple: [0.6549019607843137, 0.9058823529411765, 1.0, null]}]}}]
+    color: "#a7e7ff"
+    hatch_pattern: coarsely dotted
   WG_LANE_CPY:
     layer: [1, 32]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#f5e598', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9607843137254902, g: 0.8980392156862745, b: 0.596078431372549,
-                alpha: null, _tuple: [0.9607843137254902, 0.8980392156862745, 0.596078431372549,
-                  null]}]}}]
+    color: "#f5e598"
+    hatch_pattern: coarsely dotted
   WG_DEOX_CPY:
     layer: [1, 33]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#fac5c2', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9803921568627451, g: 0.7725490196078432, b: 0.7607843137254902,
-                alpha: null, _tuple: [0.9803921568627451, 0.7725490196078432, 0.7607843137254902,
-                  null]}]}}]
+    color: "#fac5c2"
+    hatch_pattern: coarsely dotted
   WG_ARCO_CPY:
     layer: [1, 34]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#e7a5e5', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9058823529411765, g: 0.6470588235294118, b: 0.8980392156862745,
-                alpha: null, _tuple: [0.9058823529411765, 0.6470588235294118, 0.8980392156862745,
-                  null]}]}}]
+    color: "#e7a5e5"
+    hatch_pattern: coarsely dotted
   WG_SNGL_CPY:
     layer: [1, 35]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#82ffbf', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5098039215686274, g: 1.0, b: 0.7490196078431373, alpha: null,
-                _tuple: [0.5098039215686274, 1.0, 0.7490196078431373, null]}]}}]
+    color: "#82ffbf"
+    hatch_pattern: coarsely dotted
   WG_PEDE_CPY:
     layer: [1, 36]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#dfc7b4', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.8745098039215686, g: 0.7803921568627451, b: 0.7058823529411765,
-                alpha: null, _tuple: [0.8745098039215686, 0.7803921568627451, 0.7058823529411765,
-                  null]}]}}]
+    color: "#dfc7b4"
+    hatch_pattern: coarsely dotted
   ME_GOLD_ADD:
     layer: [2, 12]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   ME_ALUM_ADD:
     layer: [2, 13]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#ef4036', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9372549019607843, g: 0.25098039215686274, b: 0.21176470588235294,
-                alpha: null, _tuple: [0.9372549019607843, 0.25098039215686274, 0.21176470588235294,
-                  null]}]}}]
+    color: "#ef4036"
+    hatch_pattern: coarsely dotted
   ME_HVIA_ADD:
     layer: [2, 14]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#92278f', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5725490196078431, g: 0.15294117647058825, b: 0.5607843137254902,
-                alpha: null, _tuple: [0.5725490196078431, 0.15294117647058825, 0.5607843137254902,
-                  null]}]}}]
+    color: "#92278f"
+    hatch_pattern: coarsely dotted
   ME_WIRE_ADD:
     layer: [2, 15]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00a651', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6509803921568628, b: 0.3176470588235294, alpha: null,
-                _tuple: [0.0, 0.6509803921568628, 0.3176470588235294, null]}]}}]
+    color: "#00a651"
+    hatch_pattern: coarsely dotted
   ME_WIPO_ADD:
     layer: [2, 16]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#8b5e3b', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5450980392156862, g: 0.3686274509803922, b: 0.23137254901960785,
-                alpha: null, _tuple: [0.5450980392156862, 0.3686274509803922, 0.23137254901960785,
-                  null]}]}}]
+    color: "#8b5e3b"
+    hatch_pattern: coarsely dotted
   ME_GOLD_SUB:
     layer: [2, 22]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#7e6b0d', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.49411764705882355, g: 0.4196078431372549, b: 0.050980392156862744,
-                alpha: null, _tuple: [0.49411764705882355, 0.4196078431372549, 0.050980392156862744,
-                  null]}]}}]
+    color: "#7e6b0d"
+    hatch_pattern: coarsely dotted
   ME_ALUM_SUB:
     layer: [2, 23]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#e61e12', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9019607843137255, g: 0.11764705882352941, b: 0.07058823529411765,
-                alpha: null, _tuple: [0.9019607843137255, 0.11764705882352941, 0.07058823529411765,
-                  null]}]}}]
+    color: "#e61e12"
+    hatch_pattern: coarsely dotted
   ME_HVIA_SUB:
     layer: [2, 24]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#6c1d69', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.4235294117647059, g: 0.11372549019607843, b: 0.4117647058823529,
-                alpha: null, _tuple: [0.4235294117647059, 0.11372549019607843, 0.4117647058823529,
-                  null]}]}}]
+    color: "#6c1d69"
+    hatch_pattern: coarsely dotted
   ME_WIRE_SUB:
     layer: [2, 25]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00773a', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.4666666666666667, b: 0.22745098039215686,
-                alpha: null, _tuple: [0.0, 0.4666666666666667, 0.22745098039215686,
-                  null]}]}}]
+    color: "#00773a"
+    hatch_pattern: coarsely dotted
   ME_WIPO_SUB:
     layer: [2, 26]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#69472c', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.4117647058823529, g: 0.2784313725490196, b: 0.17254901960784313,
-                alpha: null, _tuple: [0.4117647058823529, 0.2784313725490196, 0.17254901960784313,
-                  null]}]}}]
+    color: "#69472c"
+    hatch_pattern: coarsely dotted
   ME_GOLD_CPY:
     layer: [2, 32]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#f5e598', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9607843137254902, g: 0.8980392156862745, b: 0.596078431372549,
-                alpha: null, _tuple: [0.9607843137254902, 0.8980392156862745, 0.596078431372549,
-                  null]}]}}]
+    color: "#f5e598"
+    hatch_pattern: coarsely dotted
   ME_ALUM_CPY:
     layer: [2, 33]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#fac5c2', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9803921568627451, g: 0.7725490196078432, b: 0.7607843137254902,
-                alpha: null, _tuple: [0.9803921568627451, 0.7725490196078432, 0.7607843137254902,
-                  null]}]}}]
+    color: "#fac5c2"
+    hatch_pattern: coarsely dotted
   ME_HVIA_CPY:
     layer: [2, 34]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#e7a5e5', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9058823529411765, g: 0.6470588235294118, b: 0.8980392156862745,
-                alpha: null, _tuple: [0.9058823529411765, 0.6470588235294118, 0.8980392156862745,
-                  null]}]}}]
+    color: "#e7a5e5"
+    hatch_pattern: coarsely dotted
   ME_WIRE_CPY:
     layer: [2, 35]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#82ffbf', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5098039215686274, g: 1.0, b: 0.7490196078431373, alpha: null,
-                _tuple: [0.5098039215686274, 1.0, 0.7490196078431373, null]}]}}]
+    color: "#82ffbf"
+    hatch_pattern: coarsely dotted
   ME_WIPO_CPY:
     layer: [2, 36]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#dfc7b4', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.8745098039215686, g: 0.7803921568627451, b: 0.7058823529411765,
-                alpha: null, _tuple: [0.8745098039215686, 0.7803921568627451, 0.7058823529411765,
-                  null]}]}}]
+    color: "#dfc7b4"
+    hatch_pattern: coarsely dotted
   NP_PIMP_ADD:
     layer: [5, 12]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   NP_NIMP_ADD:
     layer: [5, 13]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#ef4036', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9372549019607843, g: 0.25098039215686274, b: 0.21176470588235294,
-                alpha: null, _tuple: [0.9372549019607843, 0.25098039215686274, 0.21176470588235294,
-                  null]}]}}]
+    color: "#ef4036"
+    hatch_pattern: coarsely dotted
   NP_PIMP_SUB:
     layer: [5, 22]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#7e6b0d', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.49411764705882355, g: 0.4196078431372549, b: 0.050980392156862744,
-                alpha: null, _tuple: [0.49411764705882355, 0.4196078431372549, 0.050980392156862744,
-                  null]}]}}]
+    color: "#7e6b0d"
+    hatch_pattern: coarsely dotted
   NP_NIMP_SUB:
     layer: [5, 23]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#e61e12', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9019607843137255, g: 0.11764705882352941, b: 0.07058823529411765,
-                alpha: null, _tuple: [0.9019607843137255, 0.11764705882352941, 0.07058823529411765,
-                  null]}]}}]
+    color: "#e61e12"
+    hatch_pattern: coarsely dotted
   NP_PIMP_CPY:
     layer: [5, 32]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#f5e598', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9607843137254902, g: 0.8980392156862745, b: 0.596078431372549,
-                alpha: null, _tuple: [0.9607843137254902, 0.8980392156862745, 0.596078431372549,
-                  null]}]}}]
+    color: "#f5e598"
+    hatch_pattern: coarsely dotted
   NP_NIMP_CPY:
     layer: [5, 33]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#fac5c2', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9803921568627451, g: 0.7725490196078432, b: 0.7607843137254902,
-                alpha: null, _tuple: [0.9803921568627451, 0.7725490196078432, 0.7607843137254902,
-                  null]}]}}]
+    color: "#fac5c2"
+    hatch_pattern: coarsely dotted
   AX_NOXX:
     layer: [63, 0]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#262262', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.14901960784313725, g: 0.13333333333333333, b: 0.3843137254901961,
-                alpha: null, _tuple: [0.14901960784313725, 0.13333333333333333, 0.3843137254901961,
-                  null]}]}}]
+    color: "#262262"
+    hatch_pattern: coarsely dotted
   AX_NOME:
     layer: [63, 1]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00aeef', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6823529411764706, b: 0.9372549019607843, alpha: null,
-                _tuple: [0.0, 0.6823529411764706, 0.9372549019607843, null]}]}}]
+    color: "#00aeef"
+    hatch_pattern: coarsely dotted
   AX_NOWG:
     layer: [63, 2]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   AX_NOUS:
     layer: [63, 9]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#f1592a', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9450980392156862, g: 0.34901960784313724, b: 0.16470588235294117,
-                alpha: null, _tuple: [0.9450980392156862, 0.34901960784313724, 0.16470588235294117,
-                  null]}]}}]
+    color: "#f1592a"
+    hatch_pattern: coarsely dotted
   AX_BBOX:
     layer: [63, 10]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#262262', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.14901960784313725, g: 0.13333333333333333, b: 0.3843137254901961,
-                alpha: null, _tuple: [0.14901960784313725, 0.13333333333333333, 0.3843137254901961,
-                  null]}]}}]
+    color: "#262262"
+    hatch_pattern: coarsely dotted
   AX_BVIZ:
     layer: [63, 11]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00aeef', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6823529411764706, b: 0.9372549019607843, alpha: null,
-                _tuple: [0.0, 0.6823529411764706, 0.9372549019607843, null]}]}}]
+    color: "#00aeef"
+    hatch_pattern: coarsely dotted
   AX_BPIN:
     layer: [63, 12]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   AX_LINE:
     layer: [63, 40]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#262262', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.14901960784313725, g: 0.13333333333333333, b: 0.3843137254901961,
-                alpha: null, _tuple: [0.14901960784313725, 0.13333333333333333, 0.3843137254901961,
-                  null]}]}}]
+    color: "#262262"
+    hatch_pattern: coarsely dotted
   AX_TRIP:
     layer: [63, 41]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00aeef', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6823529411764706, b: 0.9372549019607843, alpha: null,
-                _tuple: [0.0, 0.6823529411764706, 0.9372549019607843, null]}]}}]
+    color: "#00aeef"
+    hatch_pattern: coarsely dotted
   AX_WARN:
     layer: [63, 42]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   AX_INFO:
     layer: [63, 63]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#ef4036', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9372549019607843, g: 0.25098039215686274, b: 0.21176470588235294,
-                alpha: null, _tuple: [0.9372549019607843, 0.25098039215686274, 0.21176470588235294,
-                  null]}]}}]
+    color: "#ef4036"
+    hatch_pattern: coarsely dotted
   WG_RIBS_DF:
     layer: [1, 0]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#262262', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.14901960784313725, g: 0.13333333333333333, b: 0.3843137254901961,
-                alpha: null, _tuple: [0.14901960784313725, 0.13333333333333333, 0.3843137254901961,
-                  null]}]}}]
+    color: "#262262"
+    hatch_pattern: coarsely dotted
   WG_MOST_DF:
     layer: [1, 1]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00aeef', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6823529411764706, b: 0.9372549019607843, alpha: null,
-                _tuple: [0.0, 0.6823529411764706, 0.9372549019607843, null]}]}}]
+    color: "#00aeef"
+    hatch_pattern: coarsely dotted
   WG_LANE_DF:
     layer: [1, 2]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   WG_DEOX_DF:
     layer: [1, 3]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#ef4036', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9372549019607843, g: 0.25098039215686274, b: 0.21176470588235294,
-                alpha: null, _tuple: [0.9372549019607843, 0.25098039215686274, 0.21176470588235294,
-                  null]}]}}]
+    color: "#ef4036"
+    hatch_pattern: coarsely dotted
   WG_ARCO_LF:
     layer: [1, 4]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#92278f', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5725490196078431, g: 0.15294117647058825, b: 0.5607843137254902,
-                alpha: null, _tuple: [0.5725490196078431, 0.15294117647058825, 0.5607843137254902,
-                  null]}]}}]
+    color: "#92278f"
+    hatch_pattern: coarsely dotted
   WG_SNGL_DF:
     layer: [1, 5]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00a651', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6509803921568628, b: 0.3176470588235294, alpha: null,
-                _tuple: [0.0, 0.6509803921568628, 0.3176470588235294, null]}]}}]
+    color: "#00a651"
+    hatch_pattern: coarsely dotted
   WG_PEDE_LF:
     layer: [1, 6]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#8b5e3b', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5450980392156862, g: 0.3686274509803922, b: 0.23137254901960785,
-                alpha: null, _tuple: [0.5450980392156862, 0.3686274509803922, 0.23137254901960785,
-                  null]}]}}]
+    color: "#8b5e3b"
+    hatch_pattern: coarsely dotted
   ME_GOLD_LF_C:
     layer: [2, 2]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   ME_ALUM_LF:
     layer: [2, 3]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#ef4036', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9372549019607843, g: 0.25098039215686274, b: 0.21176470588235294,
-                alpha: null, _tuple: [0.9372549019607843, 0.25098039215686274, 0.21176470588235294,
-                  null]}]}}]
+    color: "#ef4036"
+    hatch_pattern: coarsely dotted
   ME_HVIA_DF:
     layer: [2, 4]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#92278f', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5725490196078431, g: 0.15294117647058825, b: 0.5607843137254902,
-                alpha: null, _tuple: [0.5725490196078431, 0.15294117647058825, 0.5607843137254902,
-                  null]}]}}]
+    color: "#92278f"
+    hatch_pattern: coarsely dotted
   ME_WIRE_LF:
     layer: [2, 5]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#00a651', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.0, g: 0.6509803921568628, b: 0.3176470588235294, alpha: null,
-                _tuple: [0.0, 0.6509803921568628, 0.3176470588235294, null]}]}}]
+    color: "#00a651"
+    hatch_pattern: coarsely dotted
   ME_WIPO_DF_C:
     layer: [2, 6]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#8b5e3b', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.5450980392156862, g: 0.3686274509803922, b: 0.23137254901960785,
-                alpha: null, _tuple: [0.5450980392156862, 0.3686274509803922, 0.23137254901960785,
-                  null]}]}}]
+    color: "#8b5e3b"
+    hatch_pattern: coarsely dotted
   NP_PIMP_DF:
     layer: [5, 2]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#aa9011', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.6666666666666666, g: 0.5647058823529412, b: 0.06666666666666667,
-                alpha: null, _tuple: [0.6666666666666666, 0.5647058823529412, 0.06666666666666667,
-                  null]}]}}]
+    color: "#aa9011"
+    hatch_pattern: coarsely dotted
   NP_NIMP_DF:
     layer: [5, 3]
-    color: !!python/object/new:pydantic_extra_types.color.Color
-      state: [null, {_original: '#ef4036', _rgba: !!python/object/new:pydantic_extra_types.color.RGBA {
-            state: [null, {r: 0.9372549019607843, g: 0.25098039215686274, b: 0.21176470588235294,
-                alpha: null, _tuple: [0.9372549019607843, 0.25098039215686274, 0.21176470588235294,
-                  null]}]}}]
+    color: "#ef4036"
+    hatch_pattern: coarsely dotted

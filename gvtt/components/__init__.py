@@ -20,6 +20,7 @@ from gvtt.components.transitions import (
     strip_taper,
     xs_rib_strip,
 )
+from gvtt.xsections import straight, straight_rib, straight_sc
 
 __all__ = [
     "bend_euler",
@@ -32,4 +33,7 @@ __all__ = [
     "rib_to_strip",
     "strip_taper",
     "xs_rib_strip",
+    "straight_sc",
+    "straight_rib",
+    "straight",
 ]

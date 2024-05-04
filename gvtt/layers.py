@@ -101,8 +101,8 @@ if __name__ == "__main__":
 
     # layers = lyp_to_dataclass(PATH.lyp)
     # print(layers)
-    LAYER_VIEWS = gf.technology.LayerViews(filepath=PATH.lyp)
-    LAYER_VIEWS.to_yaml(PATH.lyp_yaml)
+    LAYER_VIEWS = gf.technology.LayerViews(filepath=PATH.lyp_yaml)
+    # LAYER_VIEWS.to_yaml(PATH.lyp_yaml, default_hatch_pattern_name='coarsely dotted')
     t = KLayoutTechnology(
         name="VTT",
         layer_map=dict(LAYER),

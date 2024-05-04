@@ -1,7 +1,13 @@
-function: mmi2x2
-info: {}
-module: gdsfactory.components.mmi2x2
-name: mmi2x2_55c4183e
+function: straight
+info:
+  length: 10.0
+  route_info_euler_strip_length: 10.0
+  route_info_length: 10.0
+  route_info_type: euler_strip
+  route_info_weight: 10.0
+  width: 1.875
+module: gdsfactory.components.straight
+name: straight_bdf7fc24
 settings:
   cross_section:
     bbox_layers: null
@@ -72,11 +78,5 @@ settings:
       simplify: null
       width: 22.875
       width_function: null
-  gap_mmi: 1.25
-  length_mmi: 112.0
-  length_taper: 1.0
-  taper:
-    function: strip_taper
-  width: null
-  width_mmi: 5.0
-  width_taper: 1.875
+  length: 10.0
+  npoints: 2

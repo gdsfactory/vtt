@@ -1,5 +1,7 @@
-""" technology definitions."""
+"""technology definitions."""
+
 import sys
+from functools import partial
 
 import gdsfactory as gf
 from gdsfactory.cross_section import (
@@ -125,6 +127,10 @@ def vttstrip(
 
 sm_rib = rib(width=2.5)
 xs_sc = euler_strip = strip(width=1.875)
+
+straight_sc = partial(gf.components.straight, cross_section=xs_sc)
+straight_rib = partial(gf.components.straight, cross_section=sm_rib)
+straight = straight_sc
 
 cross_sections = get_cross_sections(sys.modules[__name__])
 

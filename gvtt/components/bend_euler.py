@@ -73,14 +73,11 @@ def bend_euler(
     )
 
     ref = c << p.extrude(x)
-    c.info["length"] = np.round(p.length(), 3)
-    c.info["dy"] = np.round(abs(float(p.points[0][0] - p.points[-1][0])), 3)
-    c.info["radius_min"] = np.round(p.info["Rmin"], 3)
-    c.info["radius"] = p.xmax
-    c.info["width"] = x.width
-
-    if x.info:
-        c.info.update(x.info)
+    c.info["length"] = float(np.round(p.length(), 3))
+    c.info["dy"] = float(np.round(abs(float(p.points[0][0] - p.points[-1][0])), 3))
+    c.info["radius_min"] = float(np.round(p.info["Rmin"], 3))
+    c.info["radius"] = float(p.xmax)
+    c.info["width"] = float(x.width)
 
     if with_bbox and x.bbox_layers:
         padding = []
