@@ -12,7 +12,7 @@ classifiers = [
   "Operating System :: OS Independent"
 ]
 dependencies = [
-  "gdsfactory[cad]==7.25.1"
+  "gdsfactory[cad]==7.26.1"
 ]
 description = "gdsfactory VTT PDK"
 keywords = ["python"]
