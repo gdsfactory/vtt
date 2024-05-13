@@ -2,7 +2,7 @@ import gdsfactory as gf
 
 if __name__ == "__main__":
     c = gf.Component(
-        "training"
+        "training-1"
     )  # Component can be though to be a canvas to draw on. It maps to GDS cells.
 
     # define components using standard gdsfactory functions
@@ -27,8 +27,7 @@ if __name__ == "__main__":
     b3.mirror()
 
     # Each component has ports defined. Connecting moves the component so the ports are matching.
-    s1.connect("o2", b1.ports["o1"])
-
+    b1.connect("o1", s1.ports["o2"])
     b2.connect("o1", b1.ports["o2"])
     b3.connect("o1", b2.ports["o2"])
     b4.connect("o1", b3.ports["o2"])
