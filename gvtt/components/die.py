@@ -46,19 +46,21 @@ def die(
             layer=bbox_layer,
         )
 
-    c.info["port_x_position_west"] = (
-        -w / 2.0 + gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] + 1.5
-    )
-    c.info["port_x_position_east"] = (
-        w / 2.0 - gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] - 1.5
-    )
+    c.info["frame_margin"] = gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] + 1.5
 
-    c.info["port_y_position_north"] = (
-        h / 2.0 - gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] - 1.5
-    )
-    c.info["port_y_position_south"] = (
-        -h / 2.0 + gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] + 1.5
-    )
+    # c.info["port_x_position_west"] = (
+    #     -w / 2.0 + gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] + 1.5
+    # )
+    # c.info["port_x_position_east"] = (
+    #     w / 2.0 - gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] - 1.5
+    # )
+
+    # c.info["port_y_position_north"] = (
+    #     h / 2.0 - gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] - 1.5
+    # )
+    # c.info["port_y_position_south"] = (
+    #     -h / 2.0 + gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] + 1.5
+    # )
 
     return c
 

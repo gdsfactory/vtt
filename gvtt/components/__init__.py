@@ -17,6 +17,7 @@ from gvtt.components.mmi2x2 import (
 from gvtt.components.transitions import (
     rib_taper,
     rib_to_strip,
+    strip_to_rib,
     strip_taper,
     xs_rib_strip,
 )
@@ -31,6 +32,7 @@ __all__ = [
     "mmi2x2",
     "rib_taper",
     "rib_to_strip",
+    "strip_to_rib",
     "strip_taper",
     "xs_rib_strip",
     "straight_sc",

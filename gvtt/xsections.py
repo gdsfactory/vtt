@@ -126,7 +126,8 @@ def vttstrip(
 
 
 sm_rib = rib(width=2.5)
-xs_sc = euler_strip = strip(width=1.875)
+euler_strip = strip(width=1.875)
+xs_sc = partial(strip, width=1.875)
 
 straight_sc = partial(gf.components.straight, cross_section=xs_sc)
 straight_rib = partial(gf.components.straight, cross_section=sm_rib)

@@ -9,6 +9,7 @@ from gdsfactory.cross_section import (
 )
 
 from gvtt.xsections import rib, strip
+from gvtt.layers import LAYER
 
 
 def xs_rib_strip(
@@ -64,8 +65,12 @@ def rib_to_strip(
     """
     c = gf.Component()
 
-    rib_strip_1 = xs_rib_strip(width=3.0, width_deep=0.5)  # rib end
-    rib_strip_2 = xs_rib_strip(width=3.0, dist_deep=-0.25)  # strip end
+    rib_strip_1 = xs_rib_strip(
+        width=3.0, width_deep=0.5, wg_marking_layer=LAYER.TYPE_RIB
+    )  # rib end
+    rib_strip_2 = xs_rib_strip(
+        width=3.0, dist_deep=-0.25, wg_marking_layer=LAYER.TYPE_STRIP
+    )  # strip end
 
     cn = c << gf.components.taper_cross_section(
         cross_section1=rib_strip_1,
@@ -102,6 +107,25 @@ def rib_to_strip(
 
 
 @gf.cell
+def strip_to_rib(
+    length=200.0,
+    width1=3.0,
+    width2=3.0,
+) -> Component:
+    r2s = rib_to_strip(length=length, width1=width2, width2=width1)
+    # swap the ports
+    print(r2s.ports)
+    r2s.ports["o1"], r2s.ports["o2"] = r2s.ports["o2"], r2s.ports["o1"]
+    r2s.ports["o1"].name, r2s.ports["o2"].name = (
+        r2s.ports["o2"].name,
+        r2s.ports["o1"].name,
+    )
+    print(r2s.ports)
+
+    return r2s
+
+
+@gf.cell
 def strip_taper(
     width1=1,
     width2=1,
@@ -112,6 +136,10 @@ def strip_taper(
     """
     Standard rib-to-strip waveguide converter.
     """
+
+    if "taper_length" in kwargs:
+        length = kwargs.pop("taper_length")
+
     length = length or abs(width1 - width2) * taper_ratio or 10e-3
     kwargs.pop("cross_section", None)
     c = gf.Component()
@@ -119,6 +147,7 @@ def strip_taper(
     ref = c << taper_cross_section(
         cross_section1=strip(width1),
         cross_section2=strip(width2),
+        length=length,
         linear=True,
         npoints=2,
     )
