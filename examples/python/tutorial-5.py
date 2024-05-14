@@ -1,5 +1,7 @@
 import gdsfactory as gf
 
+import gvtt
+
 
 @gf.cell
 def arm():
@@ -62,8 +64,15 @@ if __name__ == "__main__":
     mymzi.x = 0.0
 
     die = c << gf.get_component("die")
-    p1 = c << gf.get_component("edge_coupler_rib", pos=-250, die=die)
-    p2 = c << gf.get_component("edge_coupler_rib", pos=1000, die=die, side="E")
+
+    p1 = c << gvtt.components.edge_coupler_rib()
+    p1.xmin = die.xmin + die.info["frame_margin"]
+    p1.y = -250
+
+    p2 = c << gvtt.components.edge_coupler_rib()
+    p2.rotate(180)
+    p2.xmin = die.xmax - die.info["frame_margin"]
+    p2.y = 250
 
     routes = gf.routing.get_bundle_all_angle(
         [mymzi.ports["o1"], mymzi.ports["o2"]], [p1.ports["o1"], p2.ports["o1"]]
