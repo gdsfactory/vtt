@@ -1,9 +1,6 @@
 function: die
 info:
-  port_x_position_east: 2423.5
-  port_x_position_west: -2423.5
-  port_y_position_north: 4673.5
-  port_y_position_south: -4673.5
+  frame_margin: 76.5
 module: gvtt.components.die
 name: die
 settings:

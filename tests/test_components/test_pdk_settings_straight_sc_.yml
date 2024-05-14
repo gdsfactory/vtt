@@ -7,76 +7,12 @@ info:
   route_info_weight: 10.0
   width: 1.875
 module: gdsfactory.components.straight
-name: straight_bdf7fc24
+name: straight_7a68ed6c
 settings:
   cross_section:
-    bbox_layers: null
-    bbox_offsets: null
-    components_along_path: []
-    radius: 10.0
-    radius_min: null
-    sections:
-    - hidden: false
-      insets: null
-      layer:
-      - 89
-      - 1
-      name: _default
-      offset: 0.0
-      offset_function: null
-      port_names:
-      - o1
-      - o2
-      port_types:
-      - optical
-      - optical
-      simplify: null
+    function: strip
+    module: gvtt.xsections
+    settings:
       width: 1.875
-      width_function: null
-    - hidden: false
-      insets: null
-      layer: WG_RIBS_SUB
-      name: WG
-      offset: 0
-      offset_function: null
-      port_names:
-      - null
-      - null
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 1.875
-      width_function: null
-    - hidden: false
-      insets: null
-      layer: WG_RIBS_ADD
-      name: trench
-      offset: 0
-      offset_function: null
-      port_names:
-      - null
-      - null
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 21.875
-      width_function: null
-    - hidden: false
-      insets: null
-      layer: WG_MOST_ADD
-      name: trench_2
-      offset: 0
-      offset_function: null
-      port_names:
-      - null
-      - null
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 22.875
-      width_function: null
   length: 10.0
   npoints: 2
