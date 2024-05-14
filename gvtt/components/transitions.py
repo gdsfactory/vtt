@@ -8,8 +8,8 @@ from gdsfactory.cross_section import (
     cross_section,
 )
 
-from gvtt.xsections import rib, strip
 from gvtt.layers import LAYER
+from gvtt.xsections import rib, strip
 
 
 def xs_rib_strip(

@@ -1,14 +1,13 @@
 from functools import partial
 
-# from gdsfactory.components import mmi2x2 as _mmi2x2
-
-from gvtt.components.transitions import strip_taper
-from gvtt.xsections import xs_sc
-
 import gdsfactory as gf
 from gdsfactory.component import Component
 from gdsfactory.components.taper import taper as taper_function
 from gdsfactory.typings import ComponentFactory, CrossSectionSpec
+
+# from gdsfactory.components import mmi2x2 as _mmi2x2
+from gvtt.components.transitions import strip_taper
+from gvtt.xsections import xs_sc
 
 
 @gf.cell

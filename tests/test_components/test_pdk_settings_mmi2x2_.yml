@@ -1,80 +1,16 @@
-function: mmi2x2
+function: _mmi2x2
 info: {}
-module: gdsfactory.components.mmi2x2
-name: mmi2x2_55c4183e
+module: gvtt.components.mmi2x2
+name: _mmi2x2_07b187b9
 settings:
   cross_section:
-    bbox_layers: null
-    bbox_offsets: null
-    components_along_path: []
-    radius: 10.0
-    radius_min: null
-    sections:
-    - hidden: false
-      insets: null
-      layer:
-      - 89
-      - 1
-      name: _default
-      offset: 0.0
-      offset_function: null
-      port_names:
-      - o1
-      - o2
-      port_types:
-      - optical
-      - optical
-      simplify: null
+    function: strip
+    module: gvtt.xsections
+    settings:
       width: 1.875
-      width_function: null
-    - hidden: false
-      insets: null
-      layer: WG_RIBS_SUB
-      name: WG
-      offset: 0
-      offset_function: null
-      port_names:
-      - null
-      - null
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 1.875
-      width_function: null
-    - hidden: false
-      insets: null
-      layer: WG_RIBS_ADD
-      name: trench
-      offset: 0
-      offset_function: null
-      port_names:
-      - null
-      - null
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 21.875
-      width_function: null
-    - hidden: false
-      insets: null
-      layer: WG_MOST_ADD
-      name: trench_2
-      offset: 0
-      offset_function: null
-      port_names:
-      - null
-      - null
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 22.875
-      width_function: null
   gap_mmi: 1.25
   length_mmi: 112.0
-  length_taper: 1.0
+  length_taper: null
   taper:
     function: strip_taper
   width: null

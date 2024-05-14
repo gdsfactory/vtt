@@ -17,8 +17,8 @@ from gvtt.components.mmi2x2 import (
 from gvtt.components.transitions import (
     rib_taper,
     rib_to_strip,
-    strip_to_rib,
     strip_taper,
+    strip_to_rib,
     xs_rib_strip,
 )
 from gvtt.xsections import straight, straight_rib, straight_sc
