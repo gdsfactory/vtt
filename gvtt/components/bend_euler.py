@@ -8,6 +8,8 @@ from gdsfactory.components.wire import wire_corner
 from gdsfactory.path import euler
 from gdsfactory.typings import CrossSectionSpec, Optional
 
+from gvtt.tech import xs_sc
+
 
 def _eulerR_1550(angle: float) -> float:
     if angle == 0:
@@ -24,7 +26,7 @@ def bend_euler(
     npoints: Optional[int] = None,
     direction: str = "ccw",
     with_bbox: bool = True,
-    cross_section: CrossSectionSpec = "xs_sc",
+    cross_section: CrossSectionSpec = xs_sc,
     **kwargs,
 ) -> Component:
     """Returns an euler bend that transitions from straight to curved.
@@ -60,11 +62,11 @@ def bend_euler(
        o1_____/
     """
 
-    x = gf.get_cross_section(cross_section, **kwargs)
+    dx = gf.get_cross_section(cross_section, **kwargs)
     radius = _eulerR_1550(abs(angle))
 
     if radius is None:
-        return wire_corner(cross_section=x)
+        return wire_corner(cross_section=dx)
 
     c = Component()
 
@@ -72,19 +74,19 @@ def bend_euler(
         radius=radius, angle=angle, p=p, use_eff=with_arc_floorplan, npoints=npoints
     )
 
-    ref = c << p.extrude(x)
+    ref = c << p.extrude(dx)
     c.info["length"] = float(np.round(p.length(), 3))
     c.info["dy"] = float(np.round(abs(float(p.points[0][0] - p.points[-1][0])), 3))
     c.info["radius_min"] = float(np.round(p.info["Rmin"], 3))
-    c.info["radius"] = float(p.xmax)
-    c.info["width"] = float(x.width)
+    c.info["radius"] = float(p.dxmax)
+    c.info["width"] = float(dx.width)
 
-    if with_bbox and x.bbox_layers:
+    if with_bbox and dx.bbox_layers:
         padding = []
         angle = int(angle)
-        for offset in x.bbox_offsets:
-            top = offset if angle in [180, -180, -90] else 0
-            bottom = 0 if angle in [-90] else offset
+        for offset in dx.bbox_offsets:
+            top = offset if angle in {180, -180, -90} else 0
+            bottom = 0 if angle in {-90} else offset
             points = get_padding_points(
                 component=c,
                 default=0,
@@ -94,18 +96,16 @@ def bend_euler(
             )
             padding.append(points)
 
-        for layer, points in zip(x.bbox_layers, padding):
+        for layer, points in zip(dx.bbox_layers, padding):
             c.add_polygon(points, layer=layer)
 
     if direction == "cw":
-        ref.mirror(p1=[0, 0], p2=[1, 0])
+        ref.dmirror(p1=[0, 0], p2=[1, 0])
 
     c.add_ports(ref.ports)
-    c.absorb(ref)
-
     return c
 
 
 if __name__ == "__main__":
     c = bend_euler()
-    c.show(show_ports=True)
+    c.show()

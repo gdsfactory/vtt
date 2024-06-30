@@ -1,11 +1,9 @@
-function: strip_to_rib
 info:
-  length: 200.0
-  width1: 3.0
-  width2: 3.0
-module: gvtt.components.transitions
-name: strip_to_rib
+  length: 200
+  width1: 3
+  width2: 3
+name: strip_to_rib_L200_W3_W3
 settings:
-  length: 200.0
-  width1: 3.0
-  width2: 3.0
+  length: 200
+  width1: 3
+  width2: 3

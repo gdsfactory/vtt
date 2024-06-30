@@ -1,17 +1,14 @@
-function: bend_euler
 info:
   dy: 100.379
   length: 168.628
-  radius: 100.37938314613233
+  radius: 100.379
   radius_min: 53.676
-  width: 1.875
-module: gvtt.components.bend_euler
-name: bend_euler
+  width: 1.874
+name: bend_euler_A90_P1_WAFFa_f60d534b
 settings:
-  angle: 90.0
-  cross_section: xs_sc
+  angle: 90
+  cross_section: Fstrip_Mgvttptech_SW1p874
   direction: ccw
-  npoints: null
-  p: 1.0
+  p: 1
   with_arc_floorplan: false
   with_bbox: true

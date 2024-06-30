@@ -19,8 +19,8 @@ def arm():
 
     s1.connect("o2", b1.ports["o1"])
 
-    b2.mirror()
-    b3.mirror()
+    b2.dmirror()
+    b3.dmirror()
 
     b2.connect("o1", b1.ports["o2"])
     b3.connect("o1", b2.ports["o2"])
@@ -39,7 +39,7 @@ def mzi():
     c = gf.Component("mzi")
     a1 = c << arm()
     a2 = c << arm()
-    a2.mirror()
+    a2.dmirror()
 
     mmi = gf.get_component("mmi1x2")
 
@@ -60,21 +60,21 @@ def mzi():
 if __name__ == "__main__":
     c = gf.Component(name="training-5")
     mymzi = c << mzi()
-    mymzi.rotate(45)
-    mymzi.x = 0.0
+    mymzi.drotate(45)
+    mymzi.dx = 0.0
 
     die = c << gf.get_component("die")
 
     p1 = c << gvtt.components.edge_coupler_rib()
-    p1.xmin = die.xmin + die.info["frame_margin"]
-    p1.y = -250
+    p1.dxmin = die.dxmin + die.info["frame_margin"]
+    p1.dy = -250
 
     p2 = c << gvtt.components.edge_coupler_rib()
-    p2.rotate(180)
-    p2.xmin = die.xmax - die.info["frame_margin"]
-    p2.y = 250
+    p2.drotate(180)
+    p2.dxmin = die.dxmax - die.info["frame_margin"]
+    p2.dy = 250
 
-    routes = gf.routing.get_bundle_all_angle(
+    routes = gf.routing.route_bundle_all_angle(
         [mymzi.ports["o1"], mymzi.ports["o2"]], [p1.ports["o1"], p2.ports["o1"]]
     )
 

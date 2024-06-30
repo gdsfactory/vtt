@@ -1,12 +1,9 @@
-function: rib_taper
 info:
   length: 0.01
-  width1: 1.0
-  width2: 1.0
-module: gvtt.components.transitions
-name: rib_taper
+  width1: 1
+  width2: 1
+name: rib_taper_W1_W1_TR50_LNone
 settings:
-  length: null
-  taper_ratio: 50.0
+  taper_ratio: 50
   width1: 1
   width2: 1

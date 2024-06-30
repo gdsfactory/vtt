@@ -20,8 +20,8 @@ def arm(angle: float = 90.0) -> gf.Component:
 
     s1.connect("o2", b1.ports["o1"])
 
-    b2.mirror()
-    b3.mirror()
+    b2.dmirror()
+    b3.dmirror()
 
     b2.connect("o1", b1.ports["o2"])
     b3.connect("o1", b2.ports["o2"])

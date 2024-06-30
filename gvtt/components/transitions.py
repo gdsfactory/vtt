@@ -9,7 +9,7 @@ from gdsfactory.cross_section import (
 )
 
 from gvtt.layers import LAYER
-from gvtt.xsections import rib, strip
+from gvtt.tech import rib, strip
 
 
 def xs_rib_strip(
@@ -20,7 +20,16 @@ def xs_rib_strip(
     wg_marking_layer: LayerSpec | None = None,
     **kwargs,
 ) -> CrossSection:
-    """Return CrossSection of strip waveguide defined by trenches."""
+    """Return CrossSection of strip waveguide defined by trenches.
+
+    Args:
+        width: waveguide width.
+        width_trench: trench width.
+        width_deep: deep trench width.
+        dist_deep: deep trench distance.
+        wg_marking_layer: waveguide marking layer.
+        **kwargs: additional arguments.
+    """
 
     sections = kwargs.pop("sections", [])
     sections += [
@@ -60,8 +69,13 @@ def rib_to_strip(
     width1=3.0,
     width2=3.0,
 ) -> Component:
-    """
-    Standard rib-to-strip waveguide converter.
+    """Standard rib-to-strip waveguide converter.
+
+    Args:
+        length: taper length.
+        width1: initial width.
+        width2: final width.
+
     """
     c = gf.Component()
 
@@ -79,7 +93,6 @@ def rib_to_strip(
         length=length,
     )
 
-    c.absorb(cn)
     c.info["length"] = length
 
     if width1 != 3.0:
@@ -87,7 +100,6 @@ def rib_to_strip(
         t1.connect("o2", cn.ports["o1"])
         c.add_port("o1", port=t1.ports["o1"])
         c.info["length"] += t1.info["length"]
-        c.absorb(t1)
     else:
         c.add_port("o1", port=cn.ports["o1"])
 
@@ -96,7 +108,6 @@ def rib_to_strip(
         t2.connect("o1", cn.ports["o2"])
         c.add_port("o2", port=t2.ports["o2"])
         c.info["length"] += t2.info["length"]
-        c.absorb(t2)
     else:
         c.add_port("o2", port=cn.ports["o2"])
 
@@ -112,17 +123,13 @@ def strip_to_rib(
     width1=3.0,
     width2=3.0,
 ) -> Component:
-    r2s = rib_to_strip(length=length, width1=width2, width2=width1)
-    # swap the ports
-    print(r2s.ports)
-    r2s.ports["o1"], r2s.ports["o2"] = r2s.ports["o2"], r2s.ports["o1"]
-    r2s.ports["o1"].name, r2s.ports["o2"].name = (
-        r2s.ports["o2"].name,
-        r2s.ports["o1"].name,
-    )
-    print(r2s.ports)
+    """Returns strip to rib transition.
 
-    return r2s
+    Args:
+        length: in um.
+
+    """
+    return rib_to_strip(length=length, width1=width2, width2=width1)
 
 
 @gf.cell
@@ -133,8 +140,14 @@ def strip_taper(
     length: float | None = None,
     **kwargs,
 ) -> Component:
-    """
-    Standard rib-to-strip waveguide converter.
+    """Standard rib-to-strip waveguide converter.
+
+    Args:
+        width1: initial width.
+        width2: final width.
+        taper_ratio: taper ratio.
+        length: taper length.
+        **kwargs: additional arguments.
     """
 
     if "taper_length" in kwargs:
@@ -155,7 +168,6 @@ def strip_taper(
     c.info["width1"] = float(width1)
     c.info["width2"] = float(width2)
     c.add_ports(ref.ports)
-    c.absorb(ref)
     return c
 
 
@@ -167,8 +179,14 @@ def rib_taper(
     length: float | None = None,
     **kwargs,
 ) -> Component:
-    """
-    Standard rib-to-strip waveguide converter.
+    """Standard rib-to-strip waveguide converter.
+
+    Args:
+        width1: initial width.
+        width2: final width.
+        taper_ratio: taper ratio.
+        length: taper length.
+        **kwargs: additional arguments.
     """
     length = length or abs(width1 - width2) * taper_ratio or 10e-3
     c = gf.Component()
@@ -184,12 +202,11 @@ def rib_taper(
     c.info["width1"] = float(width1)
     c.info["width2"] = float(width2)
     c.add_ports(ref.ports)
-    c.absorb(ref)
     return c
 
 
 if __name__ == "__main__":
-    c = rib_taper()
+    c = strip_to_rib()
     # c = strip_taper()
     # c.pprint_ports()
     c.show()

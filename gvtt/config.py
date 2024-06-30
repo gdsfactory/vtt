@@ -29,6 +29,7 @@ class Path:
     libs_ngspice = libs_tech / "ngspice"
 
     gds = module_path / "gds"
+    lyp_yaml = module_path / "layers.yaml"
 
 
 PATH = Path()
