@@ -68,7 +68,7 @@ GPATH.sparameters = PATH.sparameters
 # ]
 #
 PDK.activate()
-__version__ = "0.0.4"
+__version__ = "0.0.3"
 
 if __name__ == "__main__":
     # layer_views = LayerViews(filepath=PATH.lyp_yaml)
