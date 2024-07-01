@@ -1,10 +1,8 @@
-function: edge_coupler_rib
 info: {}
-module: gvtt.components.edge_coupler_rib
-name: edge_coupler_rib
+name: edge_coupler_rib_ECW3_P_a3cf06fc
 settings:
-  edge_coupling_width: 3.0
-  polishing_length: 25.0
+  edge_coupling_width: 3
+  polishing_length: 25
   side: W
-  xpos: 0.0
-  ypos: 0.0
+  xpos: 0
+  ypos: 0

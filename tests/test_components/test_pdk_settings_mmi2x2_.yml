@@ -1,18 +1,11 @@
-function: _mmi2x2
 info: {}
-module: gvtt.components.mmi2x2
-name: _mmi2x2_07b187b9
+name: mmi2x2_WNone_WT1p874_LT_840677f4
 settings:
-  cross_section:
-    function: strip
-    module: gvtt.xsections
-    settings:
-      width: 1.875
+  cross_section: xs_sc
   gap_mmi: 1.25
-  length_mmi: 112.0
-  length_taper: null
-  taper:
-    function: strip_taper
-  width: null
-  width_mmi: 5.0
-  width_taper: 1.875
+  length_mmi: 112
+  length_taper: 1
+  straight: straight
+  taper: taper
+  width_mmi: 5
+  width_taper: 1.874

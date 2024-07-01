@@ -1,12 +1,9 @@
-function: strip_taper
 info:
   length: 0.01
-  width1: 1.0
-  width2: 1.0
-module: gvtt.components.transitions
-name: strip_taper
+  width1: 1
+  width2: 1
+name: strip_taper_W1_W1_TR25_LNone
 settings:
-  length: null
-  taper_ratio: 25.0
+  taper_ratio: 25
   width1: 1
   width2: 1

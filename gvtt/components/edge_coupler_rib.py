@@ -1,7 +1,7 @@
 import gdsfactory as gf
 from gdsfactory.component import Component
 
-from gvtt.xsections import rib
+from gvtt.tech import rib
 
 
 @gf.cell
@@ -18,29 +18,28 @@ def edge_coupler_rib(
         edge_coupling_width: width of the edge coupling waveguide.
         polishing_length: length of the edge coupling waveguide.
         side: side of the edge coupler (W, E, N, S).
-        xpos: x position of the edge coupler.
-        ypos: y position of the edge coupler.
+        xpos: dx position of the edge coupler.
+        ypos: dy position of the edge coupler.
     """
     c = gf.Component()
     side = side.upper()
 
-    if side == "W":
-        orientation = 0
     if side == "E":
         orientation = 180
-    if side == "N":
+    elif side == "N":
         orientation = -90
-    if side == "S":
+    elif side == "S":
         orientation = 90
 
+    elif side == "W":
+        orientation = 0
     ref = c << gf.components.straight(
         cross_section=rib(edge_coupling_width), length=polishing_length
     )
-    ref.rotate(orientation)
-    ref.move((xpos, ypos))
+    ref.drotate(orientation)
+    ref.dmove((xpos, ypos))
 
     c.add_port("o1", port=ref.ports["o2"])
-    c.absorb(ref)
     return c
 
 

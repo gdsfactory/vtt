@@ -1,67 +1,12 @@
-function: straight
 info:
-  length: 10.0
-  route_info_length: 10.0
-  route_info_sm_rib_length: 10.0
-  route_info_type: sm_rib
-  route_info_weight: 10.0
+  length: 10
+  route_info_length: 10
+  route_info_type: xs_59ae4bd3
+  route_info_weight: 10
+  route_info_xs_59ae4bd3_length: 10
   width: 2.5
-module: gdsfactory.components.straight
-name: straight_6e70ce88
+name: straight_L10_N2_CSxs_59ae4bd3
 settings:
-  cross_section:
-    bbox_layers: null
-    bbox_offsets: null
-    components_along_path: []
-    radius: 10.0
-    radius_min: null
-    sections:
-    - hidden: false
-      insets: null
-      layer:
-      - 89
-      - 0
-      name: _default
-      offset: 0.0
-      offset_function: null
-      port_names:
-      - o1
-      - o2
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 2.5
-      width_function: null
-    - hidden: false
-      insets: null
-      layer: WG_RIBS_SUB
-      name: WG
-      offset: 0
-      offset_function: null
-      port_names:
-      - null
-      - null
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 2.5
-      width_function: null
-    - hidden: false
-      insets: null
-      layer: WG_RIBS_ADD
-      name: trench
-      offset: 0
-      offset_function: null
-      port_names:
-      - null
-      - null
-      port_types:
-      - optical
-      - optical
-      simplify: null
-      width: 22.5
-      width_function: null
-  length: 10.0
+  cross_section: xs_59ae4bd3
+  length: 10
   npoints: 2

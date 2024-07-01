@@ -23,8 +23,8 @@ if __name__ == "__main__":
     s2 = c << straight
 
     # Reverse the direction of two of the bends.
-    b2.mirror()
-    b3.mirror()
+    b2.dmirror()
+    b3.dmirror()
 
     # Each component has ports defined. Connecting moves the component so the ports are matching.
     b1.connect("o1", s1.ports["o2"])

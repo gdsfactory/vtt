@@ -1,11 +1,9 @@
-function: rib_to_strip
 info:
-  length: 200.0
-  width1: 3.0
-  width2: 3.0
-module: gvtt.components.transitions
-name: rib_to_strip
+  length: 200
+  width1: 3
+  width2: 3
+name: rib_to_strip_L200_W3_W3
 settings:
-  length: 200.0
-  width1: 3.0
-  width2: 3.0
+  length: 200
+  width1: 3
+  width2: 3

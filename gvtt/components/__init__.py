@@ -21,7 +21,7 @@ from gvtt.components.transitions import (
     strip_to_rib,
     xs_rib_strip,
 )
-from gvtt.xsections import straight, straight_rib, straight_sc
+from gvtt.tech import straight, straight_rib, straight_sc
 
 __all__ = [
     "bend_euler",

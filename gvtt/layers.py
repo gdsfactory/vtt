@@ -88,7 +88,7 @@ class LayerMap(LayerMap):
     TEXT: Layer = (66, 0)
 
 
-LAYER = LayerMap()
+LAYER = LayerMap
 
 
 if __name__ == "__main__":
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     # LAYER_VIEWS.to_yaml(PATH.lyp_yaml, default_hatch_pattern_name='coarsely dotted')
     t = KLayoutTechnology(
         name="VTT",
-        layer_map=dict(LAYER),
+        layer_map=LAYER,
         layer_views=LAYER_VIEWS,
         # layer_stack=LAYER_STACK,
         # connectivity=connectivity,

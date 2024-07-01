@@ -1,14 +1,14 @@
 from __future__ import annotations
 
-import gdsfactory
 from gdsfactory.config import PATH as GPATH
 from gdsfactory.get_factories import get_cells
 from gdsfactory.pdk import Pdk, constants
+from gdsfactory.technology import LayerViews
 
 from gvtt import components
 from gvtt.config import PATH
 from gvtt.layers import LAYER
-from gvtt.xsections import cross_sections
+from gvtt.tech import cross_sections
 
 cells = get_cells([components])
 
@@ -44,13 +44,13 @@ LAYER_TRANSITIONS = {
     (LAYER.TYPE_STRIP, LAYER.TYPE_RIB): "strip_to_rib",
 }
 
-LAYER_VIEWS = None  # LayerViews(filepath=PATH.klayout_yaml)
+LAYER_VIEWS = LayerViews(filepath=PATH.lyp_yaml)
 
 PDK = Pdk(
     name="VTT-3umSOI",
     cells=cells,
     cross_sections=cross_sections,
-    layers=dict(LAYER),
+    layers=LAYER,
     layer_stack=None,
     layer_views=LAYER_VIEWS,
     layer_transitions=LAYER_TRANSITIONS,
@@ -61,12 +61,12 @@ GPATH.sparameters = PATH.sparameters
 
 # pdk.register_cells_yaml(dirpath=pathlib.Path(__file__).parent.absolute())
 
-gdsfactory.routing.all_angle.LOW_LOSS_CROSS_SECTIONS = [
-    {"cross_section": "rib", "settings": {"width": 2.5}},
-    {"cross_section": "xs_sc", "settings": {"width": 6.0}},
-    {"cross_section": "xs_sc", "settings": {"width": 3.0}},
-]
-
+# gdsfactory.routing.all_angle.LOW_LOSS_CROSS_SECTIONS = [
+#     {"cross_section": "rib", "settings": {"width": 2.5}},
+#     {"cross_section": "xs_sc", "settings": {"width": 6.0}},
+#     {"cross_section": "xs_sc", "settings": {"width": 3.0}},
+# ]
+#
 PDK.activate()
 __version__ = "0.0.4"
 
