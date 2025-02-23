@@ -12,14 +12,14 @@ classifiers = [
   "Operating System :: OS Independent"
 ]
 dependencies = [
-  "gdsfactory~=8.4.0"
+  "gdsfactory~=9.0.1"
 ]
 description = "gdsfactory VTT PDK"
 keywords = ["python"]
 license = {file = "LICENSE"}
 name = "gvtt"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 version = "0.1.0"
 
 [project.optional-dependencies]

@@ -1,11 +1,11 @@
 info:
   length: 10
   route_info_length: 10
-  route_info_type: xs_cc15221c
+  route_info_strip_length: 10
+  route_info_type: strip
   route_info_weight: 10
-  route_info_xs_cc15221c_length: 10
   width: 1.874
-name: straight_L10_N2_CSFstri_4e8f15f9
+name: straight_L10_N2_CSFstri_7b442aaf
 settings:
   cross_section: Fstrip_Mgvttptech_SW1p874
   length: 10

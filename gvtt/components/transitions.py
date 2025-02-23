@@ -1,12 +1,14 @@
+from typing import Any
+
 import gdsfactory as gf
 from gdsfactory.component import Component
-from gdsfactory.components.taper_cross_section import taper_cross_section
+from gdsfactory.components import taper_cross_section
 from gdsfactory.cross_section import (
     CrossSection,
-    LayerSpec,
     Section,
     cross_section,
 )
+from gdsfactory.typings import LayerSpec
 
 from gvtt.layers import LAYER
 from gvtt.tech import rib, strip
@@ -18,7 +20,7 @@ def xs_rib_strip(
     width_deep: float = 10.75,
     dist_deep: float = 3.0,
     wg_marking_layer: LayerSpec | None = None,
-    **kwargs,
+    **kwargs: Any,
 ) -> CrossSection:
     """Return CrossSection of strip waveguide defined by trenches.
 
@@ -65,9 +67,9 @@ def xs_rib_strip(
 
 @gf.cell
 def rib_to_strip(
-    length=200.0,
-    width1=3.0,
-    width2=3.0,
+    length: float = 200.0,
+    width1: float = 3.0,
+    width2: float = 3.0,
 ) -> Component:
     """Standard rib-to-strip waveguide converter.
 
@@ -119,9 +121,9 @@ def rib_to_strip(
 
 @gf.cell
 def strip_to_rib(
-    length=200.0,
-    width1=3.0,
-    width2=3.0,
+    length: float = 200.0,
+    width1: float = 3.0,
+    width2: float = 3.0,
 ) -> Component:
     """Returns strip to rib transition.
 
@@ -134,11 +136,11 @@ def strip_to_rib(
 
 @gf.cell
 def strip_taper(
-    width1=1,
-    width2=1,
-    taper_ratio=25.0,
+    width1: float = 1,
+    width2: float = 1,
+    taper_ratio: float = 25.0,
     length: float | None = None,
-    **kwargs,
+    **kwargs: Any,
 ) -> Component:
     """Standard rib-to-strip waveguide converter.
 
@@ -173,11 +175,11 @@ def strip_taper(
 
 @gf.cell
 def rib_taper(
-    width1=1,
-    width2=1,
-    taper_ratio=50.0,
+    width1: float = 1,
+    width2: float = 1,
+    taper_ratio: float = 50.0,
     length: float | None = None,
-    **kwargs,
+    **kwargs: Any,
 ) -> Component:
     """Standard rib-to-strip waveguide converter.
 

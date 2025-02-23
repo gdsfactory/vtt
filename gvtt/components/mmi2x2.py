@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import gdsfactory as gf
 from gdsfactory.component import Component
-from gdsfactory.components.straight import straight as straight_function
-from gdsfactory.components.taper import taper as taper_function
+from gdsfactory.components import straight as straight_function
+from gdsfactory.components import taper as taper_function
 from gdsfactory.typings import ComponentSpec, CrossSectionSpec
 
 from gvtt.tech import TECH
@@ -73,17 +73,23 @@ def mmi2x2(
         straight, length=length_mmi, width=width_mmi, cross_section=cross_section
     )
 
+    temp_component = Component()
+
     ports = [
-        gf.Port("o1", orientation=180, center=(0, -a), width=w_taper, cross_section=x),
-        gf.Port("o2", orientation=180, center=(0, +a), width=w_taper, cross_section=x),
-        gf.Port(
+        temp_component.add_port(
+            "o1", orientation=180, center=(0, -a), width=w_taper, cross_section=x
+        ),
+        temp_component.add_port(
+            "o2", orientation=180, center=(0, +a), width=w_taper, cross_section=x
+        ),
+        temp_component.add_port(
             "o3",
             orientation=0,
             center=(length_mmi, +a),
             width=w_taper,
             cross_section=x,
         ),
-        gf.Port(
+        temp_component.add_port(
             "o4",
             orientation=0,
             center=(length_mmi, -a),

@@ -6,7 +6,7 @@ A public [gdsfactory](https://gdsfactory.github.io/gdsfactory/index.html#) proce
 
 ### Installation for users
 
-Use python3.10 or python3.11, as some tools like kfactory are not available for older versions of python. We recommend [VSCode](https://code.visualstudio.com/) as an IDE.
+Use python3.11 or later, as some tools like kfactory are not available for older versions of python. We recommend [VSCode](https://code.visualstudio.com/) as an IDE.
 
 If you don't have python installed on your system you can [download anaconda](https://www.anaconda.com/download/)
 

@@ -1,11 +1,11 @@
 import gdsfactory as gf
-from gdsfactory.components.text import text
+from gdsfactory.components import text
 from gdsfactory.typings import ComponentSpec, Float2, LayerSpec
 
 import gvtt
 
 
-def box(x0, y0, w, h):
+def box(x0: float, y0: float, w: float, h: float) -> list[list[float]]:
     dw = w / 2.0
     dh = h / 2.0
     return [

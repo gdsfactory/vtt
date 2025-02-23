@@ -1,12 +1,13 @@
 from __future__ import annotations
 
+from typing import Any
+
 import gdsfactory as gf
 import numpy as np
 from gdsfactory.add_padding import get_padding_points
 from gdsfactory.component import Component
-from gdsfactory.components.wire import wire_corner
 from gdsfactory.path import euler
-from gdsfactory.typings import CrossSectionSpec, Optional
+from gdsfactory.typings import Coordinate, CrossSectionSpec
 
 from gvtt.tech import xs_sc
 
@@ -23,11 +24,11 @@ def bend_euler(
     angle: float = 90.0,
     p: float = 1.0,
     with_arc_floorplan: bool = False,
-    npoints: Optional[int] = None,
+    npoints: int | None = None,
     direction: str = "ccw",
     with_bbox: bool = True,
     cross_section: CrossSectionSpec = xs_sc,
-    **kwargs,
+    **kwargs: Any,
 ) -> Component:
     """Returns an euler bend that transitions from straight to curved.
 
@@ -65,24 +66,23 @@ def bend_euler(
     dx = gf.get_cross_section(cross_section, **kwargs)
     radius = _eulerR_1550(abs(angle))
 
-    if radius is None:
-        return wire_corner(cross_section=dx)
-
     c = Component()
 
-    p = euler(
+    path = euler(
         radius=radius, angle=angle, p=p, use_eff=with_arc_floorplan, npoints=npoints
     )
 
-    ref = c << p.extrude(dx)
-    c.info["length"] = float(np.round(p.length(), 3))
-    c.info["dy"] = float(np.round(abs(float(p.points[0][0] - p.points[-1][0])), 3))
-    c.info["radius_min"] = float(np.round(p.info["Rmin"], 3))
-    c.info["radius"] = float(p.dxmax)
+    ref = c << path.extrude(dx)
+    c.info["length"] = float(np.round(path.length(), 3))
+    c.info["dy"] = float(
+        np.round(abs(float(path.points[0][0] - path.points[-1][0])), 3)
+    )
+    c.info["radius_min"] = float(np.round(path.info["Rmin"], 3))
+    c.info["radius"] = float(path.dxmax)
     c.info["width"] = float(dx.width)
 
     if with_bbox and dx.bbox_layers:
-        padding = []
+        padding: list[list[Coordinate]] = []
         angle = int(angle)
         for offset in dx.bbox_offsets:
             top = offset if angle in {180, -180, -90} else 0
@@ -100,7 +100,7 @@ def bend_euler(
             c.add_polygon(points, layer=layer)
 
     if direction == "cw":
-        ref.dmirror(p1=[0, 0], p2=[1, 0])
+        ref.dmirror(p1=(0, 0), p2=(1, 0))
 
     c.add_ports(ref.ports)
     return c
