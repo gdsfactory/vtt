@@ -11,9 +11,7 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Operating System :: OS Independent"
 ]
-dependencies = [
-  "gdsfactory~=9.0.1"
-]
+dependencies = ["gdsfactory~=9.0.1"]
 description = "gdsfactory VTT PDK"
 keywords = ["python"]
 license = {file = "LICENSE"}
@@ -23,23 +21,15 @@ requires-python = ">=3.11"
 version = "0.1.0"
 
 [project.optional-dependencies]
-dev = [
-  "pre-commit",
-  "pytest",
-  "pytest-cov",
-  "pytest_regressions"
-]
-docs = [
-  "autodoc_pydantic",
-  "jupytext",
-  "jupyter-book>=0.15.1,<1.1"
-]
+dev = ["pre-commit", "pytest", "pytest-cov", "pytest_regressions"]
+docs = ["autodoc_pydantic", "jupytext", "jupyter-book>=0.15.1,<1.1"]
 
 [tool.codespell]
 ignore-words-list = "te, te/tm, te, ba, fpr, fpr_spacing, ro, nd, donot, schem"
 
 [tool.mypy]
-python_version = "3.10"
+ignore_missing_imports = true
+python_version = "3.11"
 strict = true
 
 [tool.pylsp-mypy]

@@ -7,13 +7,13 @@ from pytest_regressions.data_regression import DataRegressionFixture
 
 from gvtt import cells
 
-skip_test = {}
+skip_test: set[str] = set()
 cell_names = set(cells.keys()) - set(skip_test)
 dirpath_ref = pathlib.Path(__file__).absolute().parent / "ref"
 
 
 @pytest.fixture(params=cell_names, scope="function")
-def component(request) -> Component:
+def component(request: pytest.FixtureRequest) -> Component:
     return cells[request.param]()
 
 

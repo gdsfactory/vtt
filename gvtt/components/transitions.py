@@ -19,7 +19,7 @@ def xs_rib_strip(
     width_trench: float = 10.0,
     width_deep: float = 10.75,
     dist_deep: float = 3.0,
-    wg_marking_layer: LayerSpec | None = None,
+    wg_marking_layer: LayerSpec = LAYER.TYPE_STRIP,
     **kwargs: Any,
 ) -> CrossSection:
     """Return CrossSection of strip waveguide defined by trenches.

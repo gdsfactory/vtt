@@ -5,7 +5,7 @@ from gvtt.config import PATH
 
 filepath = PATH.repo / "docs" / "cells.rst"
 
-skip = {}
+skip: set[str] = set()
 
 skip_plot: tuple[str, ...] = ("add_fiber_array_siepic",)
 skip_settings: tuple[str, ...] = ("flatten", "safe_cell_names")

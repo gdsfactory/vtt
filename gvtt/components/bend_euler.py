@@ -16,7 +16,7 @@ def _eulerR_1550(angle: float) -> float:
     if angle == 0:
         return 0.0
     p, v, a0 = 0.79, 2093.0, 18.75  # for 1550 nm, TE, 1.875 um
-    return (v / max(abs(angle), a0)) ** (1.0 / p)
+    return float((v / max(abs(angle), a0)) ** (1.0 / p))
 
 
 @gf.cell
@@ -84,7 +84,7 @@ def bend_euler(
     if with_bbox and dx.bbox_layers:
         padding: list[list[Coordinate]] = []
         angle = int(angle)
-        for offset in dx.bbox_offsets:
+        for offset in dx.bbox_offsets or []:
             top = offset if angle in {180, -180, -90} else 0
             bottom = 0 if angle in {-90} else offset
             points = get_padding_points(
