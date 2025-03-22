@@ -11,7 +11,7 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Operating System :: OS Independent"
 ]
-dependencies = ["gdsfactory~=9.0.1"]
+dependencies = ["gdsfactory>=9.0.1,<9.4.0"]
 description = "gdsfactory VTT PDK"
 keywords = ["python"]
 license = {file = "LICENSE"}
