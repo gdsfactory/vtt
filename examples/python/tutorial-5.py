@@ -4,7 +4,7 @@ import gvtt
 
 
 @gf.cell
-def arm():
+def arm() -> gf.Component:
     c = gf.Component(name="arm")
 
     straight = gf.components.straight(length=10)
@@ -35,7 +35,7 @@ def arm():
 
 
 @gf.cell
-def mzi():
+def mzi() -> gf.Component:
     c = gf.Component("mzi")
     a1 = c << arm()
     a2 = c << arm()
@@ -73,12 +73,5 @@ if __name__ == "__main__":
     p2.drotate(180)
     p2.dxmin = die.dxmax - die.info["frame_margin"]
     p2.dy = 250
-
-    routes = gf.routing.route_bundle_all_angle(
-        [mymzi.ports["o1"], mymzi.ports["o2"]], [p1.ports["o1"], p2.ports["o1"]]
-    )
-
-    for route in routes:
-        c.add(route.references)
 
     c.show()

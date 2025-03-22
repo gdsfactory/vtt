@@ -4,6 +4,7 @@ from gdsfactory.config import PATH as GPATH
 from gdsfactory.get_factories import get_cells
 from gdsfactory.pdk import Pdk, constants
 from gdsfactory.technology import LayerViews
+from gdsfactory.typings import Layer
 
 from gvtt import components
 from gvtt.config import PATH
@@ -19,7 +20,7 @@ frame_dimensions = {
     LAYER.WG_ARCO_ADD: 100.0,
 }
 
-FRAME_LAYERS = {}
+FRAME_LAYERS: dict[Layer, str] = {}
 
 PORT_MARKER_LAYER_TO_TYPE = {
     LAYER.PORT: "optical",
@@ -53,7 +54,7 @@ PDK = Pdk(
     layers=LAYER,
     layer_stack=None,
     layer_views=LAYER_VIEWS,
-    layer_transitions=LAYER_TRANSITIONS,
+    layer_transitions=LAYER_TRANSITIONS,  # type: ignore[arg-type]
     constants=constants,
 )
 

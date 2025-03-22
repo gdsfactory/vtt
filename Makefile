@@ -4,19 +4,21 @@ install:
 	pre-commit install
 
 dev:
-	pip install -e .[dev,docs]
+	uv sync --all-extras
+	uv pip install -e .
+	uv run pre-commit install
 
 test:
-	pytest -s
+	uv run pytest -s
 
 cov:
-	pytest --cov=gvtt
+	uv run pytest --cov=gvtt
 
 mypy:
-	mypy . --ignore-missing-imports
+	uv run mypy . --ignore-missing-imports
 
 pylint:
-	pylint gvtt
+	uv run pylint gvtt
 
 ruff:
 	ruff --fix gvtt/*.py

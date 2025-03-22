@@ -1,18 +1,19 @@
 import gdsfactory as gf
-from gdsfactory.components.text import text
-from gdsfactory.typings import ComponentSpec, Float2, LayerSpec
+from gdsfactory.components import text
+from gdsfactory.typings import ComponentSpec, Coordinate, Float2, LayerSpec
 
 import gvtt
+from gvtt.layers import LAYER
 
 
-def box(x0, y0, w, h):
+def box(x0: float, y0: float, w: float, h: float) -> list[Coordinate]:
     dw = w / 2.0
     dh = h / 2.0
     return [
-        [x0 + dw, y0 + dh],
-        [x0 + dw, y0 - dh],
-        [x0 - dw, y0 - dh],
-        [x0 - dw, y0 + dh],
+        (x0 + dw, y0 + dh),
+        (x0 + dw, y0 - dh),
+        (x0 - dw, y0 - dh),
+        (x0 - dw, y0 + dh),
     ]
 
 
@@ -33,20 +34,20 @@ def die(
     c = gf.Component(name="die")
     w, h = size[0], size[1]
 
-    for layer, size in gvtt.frame_dimensions.items():
-        c.add_polygon(box(w / 2.0 - size / 2.0, 0.0, size, h), layer=layer)
-        c.add_polygon(box(-w / 2.0 + size / 2.0, 0.0, size, h), layer=layer)
+    for layer_, size_ in gvtt.frame_dimensions.items():
+        c.add_polygon(box(w / 2.0 - size_ / 2.0, 0.0, size_, h), layer=layer_)
+        c.add_polygon(box(-w / 2.0 + size_ / 2.0, 0.0, size_, h), layer=layer_)
 
-        c.add_polygon(box(0.0, h / 2.0 - size / 2.0, w, size), layer=layer)
-        c.add_polygon(box(0.0, -h / 2.0 + size / 2.0, w, size), layer=layer)
+        c.add_polygon(box(0.0, h / 2.0 - size_ / 2.0, w, size_), layer=layer_)
+        c.add_polygon(box(0.0, -h / 2.0 + size_ / 2.0, w, size_), layer=layer_)
 
     if bbox_layer:
         c.add_polygon(
-            [[w / 2, h / 2], [w / 2, -h / 2], [-w / 2, -h / 2], [-w / 2, h / 2]],
+            [(w / 2, h / 2), (w / 2, -h / 2), (-w / 2, -h / 2), (-w / 2, h / 2)],
             layer=bbox_layer,
         )
 
-    c.info["frame_margin"] = gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] + 1.5
+    c.info["frame_margin"] = gvtt.frame_dimensions[LAYER.WG_SNGL_ADD] + 1.5
 
     # c.info["port_x_position_west"] = (
     #     -w / 2.0 + gvtt.frame_dimensions[gvtt.LAYER.WG_SNGL_ADD] + 1.5

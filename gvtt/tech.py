@@ -2,15 +2,16 @@
 
 import sys
 from functools import partial
+from typing import Any
 
 import gdsfactory as gf
 from gdsfactory.cross_section import (
     CrossSection,
-    LayerSpec,
     Section,
     cross_section,
     get_cross_sections,
 )
+from gdsfactory.typings import LayerSpec
 
 from gvtt.layers import LAYER
 
@@ -26,7 +27,7 @@ def rib(
     width: float = 2.5,
     width_trench: float = 10.0,
     wg_marking_layer: LayerSpec = LAYER.TYPE_RIB,
-    **kwargs,
+    **kwargs: Any,
 ) -> CrossSection:
     """Return CrossSection of rib waveguide defined by trenches.
 
@@ -61,7 +62,7 @@ def strip(
     width: float = TECH.width_strip,
     width_trench: float = 10.0,
     wg_marking_layer: LayerSpec = LAYER.TYPE_STRIP,
-    **kwargs,
+    **kwargs: Any,
 ) -> CrossSection:
     """Return CrossSection of strip waveguide defined by trenches.
 
@@ -101,8 +102,8 @@ def strip(
 def vttstrip(
     width: float = TECH.width_strip,
     width_trench: float = 10.0,
-    wg_marking_layer: LayerSpec | None = LAYER.TYPE_STRIP,
-    **kwargs,
+    wg_marking_layer: LayerSpec = LAYER.TYPE_STRIP,
+    **kwargs: Any,
 ) -> CrossSection:
     """Return CrossSection of strip waveguide defined by trenches.
 

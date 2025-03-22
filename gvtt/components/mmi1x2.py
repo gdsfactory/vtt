@@ -1,7 +1,7 @@
 import gdsfactory as gf
 from gdsfactory.component import Component
-from gdsfactory.components.straight import straight as straight_function
-from gdsfactory.components.taper import taper as taper_function
+from gdsfactory.components import straight as straight_function
+from gdsfactory.components import taper as taper_function
 from gdsfactory.typings import ComponentSpec, CrossSectionSpec
 
 from gvtt.tech import TECH
@@ -14,7 +14,7 @@ def mmi1x2(
     length_taper: float = 1.0,
     length_mmi: float = 43.25,
     width_mmi: float = 6.25,
-    gap_mmi=(6.25 - 2 * TECH.width_strip) / 2,
+    gap_mmi: float = (6.25 - 2 * TECH.width_strip) / 2,
     taper: ComponentSpec = taper_function,
     straight: ComponentSpec = straight_function,
     cross_section: CrossSectionSpec = "xs_sc",
@@ -69,8 +69,10 @@ def mmi1x2(
     a = gap_mmi / 2 + width_taper / 2
     _ = c << gf.get_component(straight, length=length_mmi, cross_section=xs_mmi)
 
+    temp_component = Component()
+
     ports = [
-        gf.Port(
+        temp_component.add_port(
             "o1",
             orientation=180,
             center=(0, 0),
@@ -78,7 +80,7 @@ def mmi1x2(
             layer=x.layer,
             cross_section=x,
         ),
-        gf.Port(
+        temp_component.add_port(
             "o2",
             orientation=0,
             center=(+length_mmi, +a),
@@ -86,7 +88,7 @@ def mmi1x2(
             layer=x.layer,
             cross_section=x,
         ),
-        gf.Port(
+        temp_component.add_port(
             "o3",
             orientation=0,
             center=(+length_mmi, -a),

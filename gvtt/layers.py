@@ -1,8 +1,8 @@
-from gdsfactory.technology import LayerMap
+from gdsfactory.technology import LayerMap as GFLayerMap
 from gdsfactory.typings import Layer
 
 
-class LayerMap(LayerMap):
+class LayerMap(GFLayerMap):
     # waveguide types
     TYPE_RIB: Layer = (89, 0)
     TYPE_STRIP: Layer = (89, 1)
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     # LAYER_VIEWS.to_yaml(PATH.lyp_yaml, default_hatch_pattern_name='coarsely dotted')
     t = KLayoutTechnology(
         name="VTT",
-        layer_map=LAYER,
+        layer_map=LAYER,  # type: ignore[arg-type]
         layer_views=LAYER_VIEWS,
         # layer_stack=LAYER_STACK,
         # connectivity=connectivity,
